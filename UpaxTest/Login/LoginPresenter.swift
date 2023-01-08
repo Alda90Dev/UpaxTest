@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Combine
+import FirebaseAuth
 
 /////////////////////// LOGIN PRESENTER PROTOCOL
 protocol LoginPresenterProtocol: AnyObject {
@@ -34,12 +34,13 @@ class LoginPresenter: LoginPresenterProtocol {
 }
 
 extension LoginPresenter: LoginInteractorOutputProtocol {
-    
-    func interactorGetDataPresenter(receivedData: String?, error: Error?) {
-        view?.loginDataError(error: error)
-        if let response = receivedData {
+    func interactorGetDataPresenter(result: NetworkResult<User>) {
+        switch result {
+        case .success(let data):
             router?.goToHome(from: view!)
+            break
+        case .failure(let error):
+            view?.loginDataError(error: error)
         }
     }
-    
 }

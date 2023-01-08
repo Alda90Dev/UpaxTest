@@ -238,6 +238,17 @@ private extension LoginView {
             self.view.frame.origin.y = 0
         }
     }
+    
+    func presentAlert(_ title: String, message: String) {
+        self.openAlert(title: title,
+                       message: message,
+                       alertStyle: .alert,
+                       actionTitles: [Content.alert.okMessage],
+                       actionStyles: [.default],
+                       actions: [ {_ in
+            print(Content.alert.okMessage)
+        },])
+    }
 }
 
 extension LoginView: UITextFieldDelegate {
@@ -274,6 +285,10 @@ extension LoginView: LoginViewProtocol {
         guard let error = error else {
             return
         }
-        btnLogin.isEnabled = true
+        DispatchQueue.main.async {
+            self.btnLogin.isEnabled = true
+            self.presentAlert(Content.errorMessage, message: error.localizedDescription)
+        }
+        
     }
 }

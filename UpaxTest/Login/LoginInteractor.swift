@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import FirebaseAuth
+
 /////////////////////// LOGIN INTERACTOR PROTOCOLS
 protocol LoginInteractorOutputProtocol: AnyObject {
-    func interactorGetDataPresenter(receivedData: String?, error: Error?)
+    func interactorGetDataPresenter(result: NetworkResult<User>)
 }
 
 protocol LoginInteractorInputProtocol {
@@ -28,11 +30,9 @@ class LoginInteractor: LoginInteractorInputProtocol {
     func login(user: String, password: String) {
         let firebase = FirebaseManager.shared
         
-        firebase.signIn(email: user, password: password)
-    }
-    
-    private func loginError(error: Error) {
-        presenter?.interactorGetDataPresenter(receivedData: nil, error: error)
+        firebase.signIn(email: user, password: password) { [weak self] (result: NetworkResult<User>) in
+            self?.presenter?.interactorGetDataPresenter(result: result)
+        }
     }
     
 }

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		935EE722FB49C17D2F2F1C58 /* Pods_UpaxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4CDF64D7CD38B9465B3762 /* Pods_UpaxTest.framework */; };
 		B804FF5F296A917E00EAF3E6 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF5E296A917E00EAF3E6 /* FirebaseManager.swift */; };
+		B804FF61296AA6B600EAF3E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B804FF60296AA6B600EAF3E6 /* GoogleService-Info.plist */; };
+		B804FF64296AA92E00EAF3E6 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF63296AA92E00EAF3E6 /* NetworkResult.swift */; };
+		B804FF67296AAFF300EAF3E6 /* UIViewController+AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF66296AAFF300EAF3E6 /* UIViewController+AlertController.swift */; };
 		B8381A90296A44C60037B565 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8381A8F296A44C60037B565 /* LoginRouter.swift */; };
 		B876D9CC296A134000405D42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B876D9CB296A134000405D42 /* AppDelegate.swift */; };
 		B876D9D5296A134200405D42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B876D9D4296A134200405D42 /* Assets.xcassets */; };
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		AB4CDF64D7CD38B9465B3762 /* Pods_UpaxTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UpaxTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B804FF5E296A917E00EAF3E6 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		B804FF60296AA6B600EAF3E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B804FF63296AA92E00EAF3E6 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		B804FF66296AAFF300EAF3E6 /* UIViewController+AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AlertController.swift"; sourceTree = "<group>"; };
 		B8381A8F296A44C60037B565 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		B876D9C8296A134000405D42 /* UpaxTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpaxTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B876D9CB296A134000405D42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +85,22 @@
 			path = Firebase;
 			sourceTree = "<group>";
 		};
+		B804FF62296AA91200EAF3E6 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				B804FF63296AA92E00EAF3E6 /* NetworkResult.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		B804FF65296AAFD600EAF3E6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B804FF66296AAFF300EAF3E6 /* UIViewController+AlertController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B8381A8D296A446D0037B565 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,12 +141,14 @@
 		B876D9CA296A134000405D42 /* UpaxTest */ = {
 			isa = PBXGroup;
 			children = (
+				B804FF62296AA91200EAF3E6 /* NetworkManager */,
 				B804FF5D296A916C00EAF3E6 /* Firebase */,
 				B89C887A296A59F8002240C5 /* Utils */,
 				B8381A8E296A447C0037B565 /* Login */,
 				B8381A8D296A446D0037B565 /* App */,
 				B876D9D4296A134200405D42 /* Assets.xcassets */,
 				B876D9D6296A134200405D42 /* LaunchScreen.storyboard */,
+				B804FF60296AA6B600EAF3E6 /* GoogleService-Info.plist */,
 				B876D9D9296A134200405D42 /* Info.plist */,
 			);
 			path = UpaxTest;
@@ -133,6 +157,7 @@
 		B89C887A296A59F8002240C5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B804FF65296AAFD600EAF3E6 /* Extensions */,
 				B89C887B296A5A03002240C5 /* UI */,
 			);
 			path = Utils;
@@ -211,6 +236,7 @@
 			files = (
 				B876D9D8296A134200405D42 /* LaunchScreen.storyboard in Resources */,
 				B876D9D5296A134200405D42 /* Assets.xcassets in Resources */,
+				B804FF61296AA6B600EAF3E6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +290,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B89C8870296A50DA002240C5 /* LoginPresenter.swift in Sources */,
+				B804FF67296AAFF300EAF3E6 /* UIViewController+AlertController.swift in Sources */,
 				B89C887D296A5A10002240C5 /* Content.swift in Sources */,
+				B804FF64296AA92E00EAF3E6 /* NetworkResult.swift in Sources */,
 				B804FF5F296A917E00EAF3E6 /* FirebaseManager.swift in Sources */,
 				B89C887F296A5AA5002240C5 /* ImageCatalog.swift in Sources */,
 				B89C8883296A5AFA002240C5 /* CustomTextField.swift in Sources */,
