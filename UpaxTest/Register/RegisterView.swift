@@ -183,7 +183,7 @@ private extension RegisterView {
                 self.btnRegister.isEnabled = false
                 self.txtPassword.resignFirstResponder()
             }
-            presenter?.tapToRegister(input: (input.1, input.2, input.3))
+            presenter?.tapToRegister(input: (input.1, input.2, input.3, imgLogo.image?.pngData()))
         }
     }
     

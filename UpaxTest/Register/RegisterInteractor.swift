@@ -15,7 +15,7 @@ protocol RegisterInteractorOutputProtocol: AnyObject {
 
 protocol RegisterInteractorInputProtocol {
     var presenter: RegisterInteractorOutputProtocol? { get set }
-    func register(name: String, email: String, password: String)
+    func register(profile: Profile)
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -26,25 +26,47 @@ class RegisterInteractor: RegisterInteractorInputProtocol {
     
     weak var presenter: RegisterInteractorOutputProtocol?
     private let firebase = FirebaseManager.shared
+    private var resultRegister: NetworkResult<User>?
+    private var profile: Profile?
     
-    func register(name: String, email: String, password: String) {
-        
-        firebase.createUser(email: email, password: password) { [weak self] (result: NetworkResult<User>) in
+    func register(profile: Profile) {
+        self.profile = profile
+        firebase.createUser(email: profile.email, password: profile.password) { [weak self] (result: NetworkResult<User>) in
             switch result {
             case .success:
-                self?.updateUser(name: name, resultRegister: result)
+                self?.resultRegister = result
+                self?.updateUser()
             case .failure:
                 self?.presenter?.interactorGetDataPresenter(result: result)
             }
-            
         }
     }
     
 }
 
 private extension RegisterInteractor {
-    func updateUser(name: String, resultRegister: NetworkResult<User>) {
-        firebase.updateUser(name: name) { [weak self]  (result: Error?) in
+    func updateUser() {
+        guard let profile = profile else { return }
+        
+        firebase.updateUser(name: profile.name) { [weak self]  (result: Error?) in
+            if let error = result {
+                self?.presenter?.interactorGetDataPresenter(result: NetworkResult.failure(error: NetworkErrorType.customizedError(message: error.localizedDescription)))
+            }
+            
+            self?.uploadImage()
+        }
+    }
+    
+    func uploadImage() {
+        guard let profile = profile,
+              let resultRegister = resultRegister else { return }
+        
+        guard let imageData = profile.image else {
+            presenter?.interactorGetDataPresenter(result: resultRegister)
+            return
+        }
+        
+        firebase.uploadImage(name: profile.name, imageData: imageData) { [weak self]  (result: Error?) in
             if let error = result {
                 self?.presenter?.interactorGetDataPresenter(result: NetworkResult.failure(error: NetworkErrorType.customizedError(message: error.localizedDescription)))
             }

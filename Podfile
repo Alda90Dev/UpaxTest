@@ -9,5 +9,6 @@ target 'UpaxTest' do
   pod 'FirebaseAuth'
   pod 'FirebaseFirestore'
   pod 'FirebaseFirestoreSwift'
+  pod 'Firebase/Storage'  
 
 end

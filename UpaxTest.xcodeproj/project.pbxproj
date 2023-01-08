@@ -20,6 +20,7 @@
 		B804FF95296B3A8700EAF3E6 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF94296B3A8700EAF3E6 /* ImagePicker.swift */; };
 		B804FF97296B3B1F00EAF3E6 /* ImagePickerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF96296B3B1F00EAF3E6 /* ImagePickerExtensions.swift */; };
 		B804FF99296B3B9C00EAF3E6 /* ImagePickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF98296B3B9C00EAF3E6 /* ImagePickerDelegate.swift */; };
+		B804FF9B296B4CDF00EAF3E6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF9A296B4CDF00EAF3E6 /* Profile.swift */; };
 		B8381A90296A44C60037B565 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8381A8F296A44C60037B565 /* LoginRouter.swift */; };
 		B876D9CC296A134000405D42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B876D9CB296A134000405D42 /* AppDelegate.swift */; };
 		B876D9D5296A134200405D42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B876D9D4296A134200405D42 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		B804FF94296B3A8700EAF3E6 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		B804FF96296B3B1F00EAF3E6 /* ImagePickerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerExtensions.swift; sourceTree = "<group>"; };
 		B804FF98296B3B9C00EAF3E6 /* ImagePickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerDelegate.swift; sourceTree = "<group>"; };
+		B804FF9A296B4CDF00EAF3E6 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		B8381A8F296A44C60037B565 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		B876D9C8296A134000405D42 /* UpaxTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpaxTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B876D9CB296A134000405D42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				B804FF6D296ABAC500EAF3E6 /* RegisterInteractor.swift */,
 				B804FF6F296ABBCA00EAF3E6 /* RegisterPresenter.swift */,
 				B804FF71296ABC8500EAF3E6 /* RegisterView.swift */,
+				B804FF9A296B4CDF00EAF3E6 /* Profile.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				B804FF5F296A917E00EAF3E6 /* FirebaseManager.swift in Sources */,
 				B804FF6E296ABAC500EAF3E6 /* RegisterInteractor.swift in Sources */,
 				B89C887F296A5AA5002240C5 /* ImageCatalog.swift in Sources */,
+				B804FF9B296B4CDF00EAF3E6 /* Profile.swift in Sources */,
 				B804FF72296ABC8500EAF3E6 /* RegisterView.swift in Sources */,
 				B89C8883296A5AFA002240C5 /* CustomTextField.swift in Sources */,
 				B804FF97296B3B1F00EAF3E6 /* ImagePickerExtensions.swift in Sources */,

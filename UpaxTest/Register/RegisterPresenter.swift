@@ -14,7 +14,7 @@ protocol RegisterPresenterProtocol: AnyObject {
     var interactor: RegisterInteractorInputProtocol? { get set }
     var router: RegisterRouterProtocol? { get set }
     
-    func tapToRegister(input: (String, String, String))
+    func tapToRegister(input: (String, String, String, Data?))
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -28,8 +28,9 @@ class RegisterPresenter: RegisterPresenterProtocol {
     var router: RegisterRouterProtocol?
     
     
-    func tapToRegister(input: (String, String, String)) {
-        interactor?.register(name: input.0, email: input.1, password: input.2)
+    func tapToRegister(input: (String, String, String, Data?)) {
+        let profile = Profile(name: input.0, email: input.1, password: input.2, image: input.3)
+        interactor?.register(profile: profile)
     }
 }
 

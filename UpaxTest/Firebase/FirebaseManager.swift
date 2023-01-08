@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseAuth
+import FirebaseStorage
 
 class FirebaseManager {
     
@@ -17,6 +18,8 @@ class FirebaseManager {
         
         return Static.instance
     }
+    
+    private let storage = Storage.storage().reference()
     
     func signIn(email: String, password: String, completion: @escaping (NetworkResult<User>) -> ()) {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
@@ -56,6 +59,33 @@ class FirebaseManager {
             completion(nil)
             return
         })
+    }
+    
+    func uploadImage(name: String, imageData: Data, completion: @escaping (Error?) -> ()) {
+        storage.child("images/\(name).png").putData(imageData, metadata: nil) { _, error in
+            
+            if let error = error {
+                completion(error)
+                return
+            }
+            
+            completion(nil)
+            return
+        }
+    }
+    
+    func getImage(name: String, completion: @escaping (NetworkResult<String>) -> ()) {
+        storage.child("images/\(name).png").downloadURL { url, error in
+            if let error = error {
+                completion(NetworkResult.failure(error: NetworkErrorType.customizedError(message: error.localizedDescription)))
+                return
+            }
+            
+            if let url = url {
+                let urlString = url.absoluteString
+                completion(NetworkResult.success(data: urlString))
+            }
+        }
     }
     
     func signOut() {
