@@ -3,25 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		935EE722FB49C17D2F2F1C58 /* Pods_UpaxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4CDF64D7CD38B9465B3762 /* Pods_UpaxTest.framework */; };
+		B804FF5F296A917E00EAF3E6 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF5E296A917E00EAF3E6 /* FirebaseManager.swift */; };
+		B8381A90296A44C60037B565 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8381A8F296A44C60037B565 /* LoginRouter.swift */; };
 		B876D9CC296A134000405D42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B876D9CB296A134000405D42 /* AppDelegate.swift */; };
-		B876D9D0296A134000405D42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B876D9CF296A134000405D42 /* ViewController.swift */; };
 		B876D9D5296A134200405D42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B876D9D4296A134200405D42 /* Assets.xcassets */; };
 		B876D9D8296A134200405D42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B876D9D6296A134200405D42 /* LaunchScreen.storyboard */; };
+		B89C8870296A50DA002240C5 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C886F296A50DA002240C5 /* LoginPresenter.swift */; };
+		B89C8872296A50F2002240C5 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C8871296A50F2002240C5 /* LoginInteractor.swift */; };
+		B89C8879296A52D9002240C5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C8878296A52D9002240C5 /* LoginView.swift */; };
+		B89C887D296A5A10002240C5 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C887C296A5A10002240C5 /* Content.swift */; };
+		B89C887F296A5AA5002240C5 /* ImageCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C887E296A5AA5002240C5 /* ImageCatalog.swift */; };
+		B89C8881296A5AC5002240C5 /* ColorCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C8880296A5AC5002240C5 /* ColorCatalog.swift */; };
+		B89C8883296A5AFA002240C5 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C8882296A5AFA002240C5 /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AB4CDF64D7CD38B9465B3762 /* Pods_UpaxTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UpaxTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B804FF5E296A917E00EAF3E6 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		B8381A8F296A44C60037B565 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		B876D9C8296A134000405D42 /* UpaxTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpaxTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B876D9CB296A134000405D42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B876D9CF296A134000405D42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B876D9D4296A134200405D42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B876D9D7296A134200405D42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B876D9D9296A134200405D42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B89C886F296A50DA002240C5 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		B89C8871296A50F2002240C5 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		B89C8878296A52D9002240C5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B89C887C296A5A10002240C5 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		B89C887E296A5AA5002240C5 /* ImageCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCatalog.swift; sourceTree = "<group>"; };
+		B89C8880296A5AC5002240C5 /* ColorCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCatalog.swift; sourceTree = "<group>"; };
+		B89C8882296A5AFA002240C5 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		D60860DC6DCF504FBA05F636 /* Pods-UpaxTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpaxTest.debug.xcconfig"; path = "Target Support Files/Pods-UpaxTest/Pods-UpaxTest.debug.xcconfig"; sourceTree = "<group>"; };
 		EA755A27918A8605348D44EC /* Pods-UpaxTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpaxTest.release.xcconfig"; path = "Target Support Files/Pods-UpaxTest/Pods-UpaxTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -44,7 +60,6 @@
 				D60860DC6DCF504FBA05F636 /* Pods-UpaxTest.debug.xcconfig */,
 				EA755A27918A8605348D44EC /* Pods-UpaxTest.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -54,6 +69,33 @@
 				AB4CDF64D7CD38B9465B3762 /* Pods_UpaxTest.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B804FF5D296A916C00EAF3E6 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				B804FF5E296A917E00EAF3E6 /* FirebaseManager.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		B8381A8D296A446D0037B565 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B876D9CB296A134000405D42 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B8381A8E296A447C0037B565 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B89C886F296A50DA002240C5 /* LoginPresenter.swift */,
+				B8381A8F296A44C60037B565 /* LoginRouter.swift */,
+				B89C8871296A50F2002240C5 /* LoginInteractor.swift */,
+				B89C8878296A52D9002240C5 /* LoginView.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		B876D9BF296A134000405D42 = {
@@ -77,13 +119,34 @@
 		B876D9CA296A134000405D42 /* UpaxTest */ = {
 			isa = PBXGroup;
 			children = (
-				B876D9CB296A134000405D42 /* AppDelegate.swift */,
-				B876D9CF296A134000405D42 /* ViewController.swift */,
+				B804FF5D296A916C00EAF3E6 /* Firebase */,
+				B89C887A296A59F8002240C5 /* Utils */,
+				B8381A8E296A447C0037B565 /* Login */,
+				B8381A8D296A446D0037B565 /* App */,
 				B876D9D4296A134200405D42 /* Assets.xcassets */,
 				B876D9D6296A134200405D42 /* LaunchScreen.storyboard */,
 				B876D9D9296A134200405D42 /* Info.plist */,
 			);
 			path = UpaxTest;
+			sourceTree = "<group>";
+		};
+		B89C887A296A59F8002240C5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B89C887B296A5A03002240C5 /* UI */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B89C887B296A5A03002240C5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B89C887C296A5A10002240C5 /* Content.swift */,
+				B89C8882296A5AFA002240C5 /* CustomTextField.swift */,
+				B89C887E296A5AA5002240C5 /* ImageCatalog.swift */,
+				B89C8880296A5AC5002240C5 /* ColorCatalog.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,8 +263,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B876D9D0296A134000405D42 /* ViewController.swift in Sources */,
+				B89C8870296A50DA002240C5 /* LoginPresenter.swift in Sources */,
+				B89C887D296A5A10002240C5 /* Content.swift in Sources */,
+				B804FF5F296A917E00EAF3E6 /* FirebaseManager.swift in Sources */,
+				B89C887F296A5AA5002240C5 /* ImageCatalog.swift in Sources */,
+				B89C8883296A5AFA002240C5 /* CustomTextField.swift in Sources */,
 				B876D9CC296A134000405D42 /* AppDelegate.swift in Sources */,
+				B89C8872296A50F2002240C5 /* LoginInteractor.swift in Sources */,
+				B89C8879296A52D9002240C5 /* LoginView.swift in Sources */,
+				B89C8881296A5AC5002240C5 /* ColorCatalog.swift in Sources */,
+				B8381A90296A44C60037B565 /* LoginRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
