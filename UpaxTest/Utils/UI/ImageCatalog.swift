@@ -9,4 +9,5 @@ import UIKit
 
 struct ImageCatalog {
     static let logo: UIImage = UIImage(named: "logo") ?? UIImage()
+    static let placeholderUser: UIImage = UIImage(named: "placeholderUser") ?? UIImage()
 }

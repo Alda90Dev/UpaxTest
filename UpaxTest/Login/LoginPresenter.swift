@@ -15,6 +15,7 @@ protocol LoginPresenterProtocol: AnyObject {
     var router: LoginRouterProtocol? { get set }
     
     func tapToLogin(input: (String, String))
+    func tapToRegister()
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -30,6 +31,10 @@ class LoginPresenter: LoginPresenterProtocol {
     
     func tapToLogin(input: (String, String)) {
         interactor?.login(user: input.0, password: input.1)
+    }
+    
+    func tapToRegister() {
+        router?.goToRegister(from: view!)
     }
 }
 

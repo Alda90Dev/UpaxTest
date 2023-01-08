@@ -1,42 +1,35 @@
 //
-//  LoginView.swift
+//  RegisterView.swift
 //  UpaxTest
 //
-//  Created by Aldair Carrillo on 07/01/23.
+//  Created by Aldair Carrillo on 08/01/23.
 //
 
 import UIKit
 
-/////////////////////// LOGIN VIEW PROTOCOL
-protocol LoginViewProtocol: AnyObject {
-    var presenter: LoginPresenterProtocol? { get set }
+/////////////////////// REGISTER VIEW PROTOCOL
+protocol RegisterViewProtocol: AnyObject {
+    var presenter: RegisterPresenterProtocol? { get set }
     
-    func loginDataError(error: Error?)
+    func registerDataError(error: Error?)
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////// LOGIN  VIEW
+/////////////////////// REGISTER  VIEW
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-class LoginView: UIViewController {
+class RegisterView: UIViewController {
     
     private lazy var imgLogo: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.contentMode = .scaleAspectFit
         image.clipsToBounds = true
-        image.image = ImageCatalog.logo
+        image.image = ImageCatalog.placeholderUser
+        image.isUserInteractionEnabled = true
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedTakePicture))
+        image.addGestureRecognizer(tapGestureRecognizer)
         return image
-    }()
-    
-    private lazy var lblHiMessage: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = ColorCatalog.dark
-        lbl.text = Content.hiMessage
-        lbl.numberOfLines = 2
-        lbl.textAlignment = .center
-        return lbl
     }()
     
     private lazy var stackView: UIStackView = {
@@ -48,6 +41,15 @@ class LoginView: UIViewController {
         stack.spacing = 15
         return stack
     }()
+    
+    private lazy var txtUser: CustomTextField = {
+        let txt = CustomTextField()
+        txt.translatesAutoresizingMaskIntoConstraints = false
+        txt.placeholderText = Content.user
+        txt.delegate = self
+        return txt
+    }()
+    
     private lazy var txtEmail: CustomTextField = {
         let txt = CustomTextField()
         txt.translatesAutoresizingMaskIntoConstraints = false
@@ -63,6 +65,15 @@ class LoginView: UIViewController {
         txt.isSecureTextEntry = true
         txt.delegate = self
         return txt
+    }()
+    
+    private lazy var lblUserError: UILabel = {
+        let lbl = UILabel()
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.textColor = .red
+        lbl.text = Content.required
+        lbl.isHidden = true
+        return lbl
     }()
     
     private lazy var lblEmailError: UILabel = {
@@ -83,10 +94,10 @@ class LoginView: UIViewController {
         return lbl
     }()
     
-    private lazy var btnLogin: UIButton = {
+    private lazy var btnRegister: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.setTitle(Content.logIn, for: .normal)
+        btn.setTitle(Content.signUp, for: .normal)
         btn.setTitleColor(.white, for: .normal)
         btn.layer.backgroundColor = ColorCatalog.principal.cgColor
         btn.layer.cornerRadius = 2
@@ -94,37 +105,9 @@ class LoginView: UIViewController {
         return btn
     }()
     
-    private lazy var lblNew: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = ColorCatalog.dark
-        lbl.numberOfLines = 1
-        lbl.text = Content.new
-        return lbl
-    }()
-    
-    private lazy var btnSignUp: UIButton = {
-        let btn = UIButton()
-        btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.setTitle(Content.signUp, for: .normal)
-        btn.setTitleColor(ColorCatalog.principal, for: .normal)
-        btn.addTarget(self, action: #selector(tappedSignUp), for: .touchUpInside)
-        return btn
-    }()
-    
-    private lazy var bottomStackView: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .horizontal
-        stack.alignment = .center
-        stack.distribution = .fill
-        stack.spacing = 8
-        return stack
-    }()
-    
-    
-    var presenter: LoginPresenterProtocol?
+    var presenter: RegisterPresenterProtocol?
 
+    private var userValue: String?
     private var emailValue: String?
     private var passwordValue: String?
     private var constraintsArray: [NSLayoutConstraint] = []
@@ -139,28 +122,27 @@ class LoginView: UIViewController {
     }
 
     override func viewDidLayoutSubviews() {
+        txtUser.addLineLayer()
         txtEmail.addLineLayer()
         txtPassword.addLineLayer()
+        imgLogo.layer.cornerRadius = imgLogo.frame.size.width / 2
     }
 }
 
-private extension LoginView {
+private extension RegisterView {
     
     func setupView() {
         
+        stackView.addArrangedSubview(lblUserError)
+        stackView.addArrangedSubview(txtUser)
         stackView.addArrangedSubview(lblEmailError)
         stackView.addArrangedSubview(txtEmail)
         stackView.addArrangedSubview(lblPasswordError)
         stackView.addArrangedSubview(txtPassword)
         
-        bottomStackView.addArrangedSubview(lblNew)
-        bottomStackView.addArrangedSubview(btnSignUp)
-        
         view.addSubview(imgLogo)
-        view.addSubview(lblHiMessage)
         view.addSubview(stackView)
-        view.addSubview(btnLogin)
-        view.addSubview(bottomStackView)
+        view.addSubview(btnRegister)
         
         setConstraints()
         
@@ -169,26 +151,20 @@ private extension LoginView {
     func setConstraints() {
         
         constraintsArray = [
-            imgLogo.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 120),
+            imgLogo.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80),
             imgLogo.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             imgLogo.widthAnchor.constraint(equalToConstant: 100),
             imgLogo.heightAnchor.constraint(equalToConstant: 100),
             
-            lblHiMessage.topAnchor.constraint(equalTo: imgLogo.bottomAnchor, constant: 20),
-            lblHiMessage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 45),
-            lblHiMessage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -45),
-            
-            stackView.topAnchor.constraint(equalTo: lblHiMessage.bottomAnchor, constant: 50),
+            stackView.topAnchor.constraint(equalTo: imgLogo.bottomAnchor, constant: 50),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 45),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -45),
             
-            btnLogin.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 50),
-            btnLogin.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 45),
-            btnLogin.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -45),
-            btnLogin.heightAnchor.constraint(equalToConstant: 55),
+            btnRegister.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 50),
+            btnRegister.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 45),
+            btnRegister.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -45),
+            btnRegister.heightAnchor.constraint(equalToConstant: 55)
             
-            bottomStackView.topAnchor.constraint(equalTo: btnLogin.bottomAnchor, constant: 25),
-            bottomStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ]
         
         NSLayoutConstraint.activate(constraintsArray)
@@ -198,18 +174,25 @@ private extension LoginView {
         if let input = isInputValid(),
             input.0 {
             DispatchQueue.main.async {
-                self.btnLogin.isEnabled = false
+                self.btnRegister.isEnabled = false
                 self.txtPassword.resignFirstResponder()
             }
-            presenter?.tapToLogin(input: (input.1, input.2))
+            presenter?.tapToRegister(input: (input.1, input.2, input.3))
         }
     }
     
-    @objc func tappedSignUp() {
-        presenter?.tapToRegister()
+    @objc func tappedTakePicture() {
+        print("TAKE A PICTURE")
     }
     
-    func isInputValid() -> (Bool, String, String)? {
+    func isInputValid() -> (Bool, String, String, String)? {
+        
+        guard let userValue = userValue,
+              !userValue.isEmpty else {
+            lblUserError.isHidden = false
+            return nil
+        }
+        
         guard let emailValue = emailValue,
               !emailValue.isEmpty else {
             lblEmailError.isHidden = false
@@ -222,7 +205,7 @@ private extension LoginView {
             return nil
         }
         
-        return (true, emailValue, passwordValue)
+        return (true, userValue, emailValue, passwordValue)
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -251,9 +234,11 @@ private extension LoginView {
     }
 }
 
-extension LoginView: UITextFieldDelegate {
+extension RegisterView: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
+        case txtUser:
+            txtEmail.becomeFirstResponder()
         case txtEmail:
             txtPassword.becomeFirstResponder()
         default:
@@ -267,6 +252,9 @@ extension LoginView: UITextFieldDelegate {
         
         guard let text = textField.text else { return }
         switch textField {
+        case txtUser:
+            lblUserError.isHidden = !text.isEmpty
+            userValue = text
         case txtEmail:
             lblEmailError.isHidden = !text.isEmpty
             emailValue = text
@@ -279,16 +267,16 @@ extension LoginView: UITextFieldDelegate {
     }
 }
 
-extension LoginView: LoginViewProtocol {
+extension RegisterView: RegisterViewProtocol {
     
-    func loginDataError(error: Error?) {
+    func registerDataError(error: Error?) {
         guard let error = error else {
             return
         }
         DispatchQueue.main.async {
-            self.btnLogin.isEnabled = true
+            self.btnRegister.isEnabled = true
             self.presentAlert(Content.errorMessage, message: error.localizedDescription)
         }
-        
     }
+    
 }

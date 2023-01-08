@@ -12,6 +12,11 @@
 		B804FF61296AA6B600EAF3E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B804FF60296AA6B600EAF3E6 /* GoogleService-Info.plist */; };
 		B804FF64296AA92E00EAF3E6 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF63296AA92E00EAF3E6 /* NetworkResult.swift */; };
 		B804FF67296AAFF300EAF3E6 /* UIViewController+AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF66296AAFF300EAF3E6 /* UIViewController+AlertController.swift */; };
+		B804FF6A296AB9CB00EAF3E6 /* RegisterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF69296AB9CB00EAF3E6 /* RegisterRouter.swift */; };
+		B804FF6C296ABA5600EAF3E6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF6B296ABA5600EAF3E6 /* HomeView.swift */; };
+		B804FF6E296ABAC500EAF3E6 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF6D296ABAC500EAF3E6 /* RegisterInteractor.swift */; };
+		B804FF70296ABBCA00EAF3E6 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF6F296ABBCA00EAF3E6 /* RegisterPresenter.swift */; };
+		B804FF72296ABC8500EAF3E6 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF71296ABC8500EAF3E6 /* RegisterView.swift */; };
 		B8381A90296A44C60037B565 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8381A8F296A44C60037B565 /* LoginRouter.swift */; };
 		B876D9CC296A134000405D42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B876D9CB296A134000405D42 /* AppDelegate.swift */; };
 		B876D9D5296A134200405D42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B876D9D4296A134200405D42 /* Assets.xcassets */; };
@@ -31,6 +36,11 @@
 		B804FF60296AA6B600EAF3E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B804FF63296AA92E00EAF3E6 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		B804FF66296AAFF300EAF3E6 /* UIViewController+AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AlertController.swift"; sourceTree = "<group>"; };
+		B804FF69296AB9CB00EAF3E6 /* RegisterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRouter.swift; sourceTree = "<group>"; };
+		B804FF6B296ABA5600EAF3E6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B804FF6D296ABAC500EAF3E6 /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
+		B804FF6F296ABBCA00EAF3E6 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		B804FF71296ABC8500EAF3E6 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		B8381A8F296A44C60037B565 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		B876D9C8296A134000405D42 /* UpaxTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpaxTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B876D9CB296A134000405D42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +111,17 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		B804FF68296AB99200EAF3E6 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				B804FF69296AB9CB00EAF3E6 /* RegisterRouter.swift */,
+				B804FF6D296ABAC500EAF3E6 /* RegisterInteractor.swift */,
+				B804FF6F296ABBCA00EAF3E6 /* RegisterPresenter.swift */,
+				B804FF71296ABC8500EAF3E6 /* RegisterView.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		B8381A8D296A446D0037B565 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +162,7 @@
 		B876D9CA296A134000405D42 /* UpaxTest */ = {
 			isa = PBXGroup;
 			children = (
+				B804FF68296AB99200EAF3E6 /* Register */,
 				B804FF62296AA91200EAF3E6 /* NetworkManager */,
 				B804FF5D296A916C00EAF3E6 /* Firebase */,
 				B89C887A296A59F8002240C5 /* Utils */,
@@ -150,6 +172,7 @@
 				B876D9D6296A134200405D42 /* LaunchScreen.storyboard */,
 				B804FF60296AA6B600EAF3E6 /* GoogleService-Info.plist */,
 				B876D9D9296A134200405D42 /* Info.plist */,
+				B804FF6B296ABA5600EAF3E6 /* HomeView.swift */,
 			);
 			path = UpaxTest;
 			sourceTree = "<group>";
@@ -290,17 +313,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				B89C8870296A50DA002240C5 /* LoginPresenter.swift in Sources */,
+				B804FF6C296ABA5600EAF3E6 /* HomeView.swift in Sources */,
 				B804FF67296AAFF300EAF3E6 /* UIViewController+AlertController.swift in Sources */,
 				B89C887D296A5A10002240C5 /* Content.swift in Sources */,
 				B804FF64296AA92E00EAF3E6 /* NetworkResult.swift in Sources */,
 				B804FF5F296A917E00EAF3E6 /* FirebaseManager.swift in Sources */,
+				B804FF6E296ABAC500EAF3E6 /* RegisterInteractor.swift in Sources */,
 				B89C887F296A5AA5002240C5 /* ImageCatalog.swift in Sources */,
+				B804FF72296ABC8500EAF3E6 /* RegisterView.swift in Sources */,
 				B89C8883296A5AFA002240C5 /* CustomTextField.swift in Sources */,
 				B876D9CC296A134000405D42 /* AppDelegate.swift in Sources */,
 				B89C8872296A50F2002240C5 /* LoginInteractor.swift in Sources */,
 				B89C8879296A52D9002240C5 /* LoginView.swift in Sources */,
 				B89C8881296A5AC5002240C5 /* ColorCatalog.swift in Sources */,
+				B804FF6A296AB9CB00EAF3E6 /* RegisterRouter.swift in Sources */,
 				B8381A90296A44C60037B565 /* LoginRouter.swift in Sources */,
+				B804FF70296ABBCA00EAF3E6 /* RegisterPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

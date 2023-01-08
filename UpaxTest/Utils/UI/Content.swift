@@ -10,6 +10,7 @@ import Foundation
 struct Content {
     static let loading: String = "Loading..."
     static let required: String = "Required"
+    static let user: String = "Full Name"
     static let email: String = "Email"
     static let password: String = "Password"
     static let logIn: String = "Sign In"
