@@ -42,6 +42,8 @@ extension LoginPresenter: LoginInteractorOutputProtocol {
     func interactorGetDataPresenter(result: NetworkResult<User>) {
         switch result {
         case .success(let data):
+            Defaults.shared.email = data.email ?? ""
+            Defaults.shared.name = data.displayName ?? ""
             router?.goToHome(from: view!)
             break
         case .failure(let error):

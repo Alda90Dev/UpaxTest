@@ -54,10 +54,12 @@ class LoginRouter: LoginRouterProtocol {
         
         if let vc = view as? UIViewController {
             let registerView = RegisterRouter.createRegisterModule()
-            let navVC = UINavigationController(rootViewController: registerView)
-            navVC.modalTransitionStyle = .crossDissolve
-            navVC.modalPresentationStyle = .fullScreen
-            vc.present(navVC, animated: true)
+//            let navVC = UINavigationController(rootViewController: registerView)
+//            navVC.modalTransitionStyle = .crossDissolve
+//            navVC.modalPresentationStyle = .fullScreen
+//            vc.present(navVC, animated: true)
+            
+            vc.navigationController?.pushViewController(registerView, animated: true)
         }
     }
 }

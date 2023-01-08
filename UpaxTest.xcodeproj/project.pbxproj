@@ -21,6 +21,7 @@
 		B804FF97296B3B1F00EAF3E6 /* ImagePickerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF96296B3B1F00EAF3E6 /* ImagePickerExtensions.swift */; };
 		B804FF99296B3B9C00EAF3E6 /* ImagePickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF98296B3B9C00EAF3E6 /* ImagePickerDelegate.swift */; };
 		B804FF9B296B4CDF00EAF3E6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF9A296B4CDF00EAF3E6 /* Profile.swift */; };
+		B804FF9E296B539F00EAF3E6 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF9D296B539F00EAF3E6 /* Defaults.swift */; };
 		B8381A90296A44C60037B565 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8381A8F296A44C60037B565 /* LoginRouter.swift */; };
 		B876D9CC296A134000405D42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B876D9CB296A134000405D42 /* AppDelegate.swift */; };
 		B876D9D5296A134200405D42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B876D9D4296A134200405D42 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		B804FF96296B3B1F00EAF3E6 /* ImagePickerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerExtensions.swift; sourceTree = "<group>"; };
 		B804FF98296B3B9C00EAF3E6 /* ImagePickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerDelegate.swift; sourceTree = "<group>"; };
 		B804FF9A296B4CDF00EAF3E6 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		B804FF9D296B539F00EAF3E6 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		B8381A8F296A44C60037B565 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		B876D9C8296A134000405D42 /* UpaxTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpaxTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B876D9CB296A134000405D42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,14 @@
 			path = ImagePickerManager;
 			sourceTree = "<group>";
 		};
+		B804FF9C296B538C00EAF3E6 /* LocalStorage */ = {
+			isa = PBXGroup;
+			children = (
+				B804FF9D296B539F00EAF3E6 /* Defaults.swift */,
+			);
+			path = LocalStorage;
+			sourceTree = "<group>";
+		};
 		B8381A8D296A446D0037B565 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +191,7 @@
 		B876D9CA296A134000405D42 /* UpaxTest */ = {
 			isa = PBXGroup;
 			children = (
+				B804FF9C296B538C00EAF3E6 /* LocalStorage */,
 				B804FF93296B3A6F00EAF3E6 /* ImagePickerManager */,
 				B804FF68296AB99200EAF3E6 /* Register */,
 				B804FF62296AA91200EAF3E6 /* NetworkManager */,
@@ -353,6 +364,7 @@
 				B804FF6A296AB9CB00EAF3E6 /* RegisterRouter.swift in Sources */,
 				B8381A90296A44C60037B565 /* LoginRouter.swift in Sources */,
 				B804FF70296ABBCA00EAF3E6 /* RegisterPresenter.swift in Sources */,
+				B804FF9E296B539F00EAF3E6 /* Defaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

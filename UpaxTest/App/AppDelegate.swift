@@ -19,9 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
+        UINavigationBar.appearance().tintColor = ColorCatalog.dark
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         let loginView = LoginRouter.createLoginModule()
-        window?.rootViewController = loginView
+        
+        let navVC = UINavigationController(rootViewController: loginView)
+        window?.rootViewController = navVC
         window?.makeKeyAndVisible()
         
         return true
