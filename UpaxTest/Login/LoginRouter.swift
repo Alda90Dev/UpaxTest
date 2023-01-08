@@ -47,18 +47,19 @@ class LoginRouter: LoginRouterProtocol {
     }
     
     func goToHome(from view: LoginViewProtocol) {
-       
+        if let vc = view as? UIViewController {
+            let homeView = HomeView()
+            let navVC = UINavigationController(rootViewController: homeView)
+            navVC.modalTransitionStyle = .crossDissolve
+            navVC.modalPresentationStyle = .fullScreen
+            vc.present(navVC, animated: true)
+        }
     }
     
     func goToRegister(from view: LoginViewProtocol) {
         
         if let vc = view as? UIViewController {
             let registerView = RegisterRouter.createRegisterModule()
-//            let navVC = UINavigationController(rootViewController: registerView)
-//            navVC.modalTransitionStyle = .crossDissolve
-//            navVC.modalPresentationStyle = .fullScreen
-//            vc.present(navVC, animated: true)
-            
             vc.navigationController?.pushViewController(registerView, animated: true)
         }
     }

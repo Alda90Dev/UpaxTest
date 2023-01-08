@@ -22,10 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = ColorCatalog.dark
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        let loginView = LoginRouter.createLoginModule()
-        
-        let navVC = UINavigationController(rootViewController: loginView)
-        window?.rootViewController = navVC
+        let splashView = SplashRouter.createSplashModule()
+        window?.rootViewController = splashView
         window?.makeKeyAndVisible()
         
         return true

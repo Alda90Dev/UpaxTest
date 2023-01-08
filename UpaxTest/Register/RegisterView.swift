@@ -128,8 +128,6 @@ class RegisterView: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        navigationController?.navigationBar.standardAppearance = appearance
-//        navigationController?.navigationBar.scrollEdgeAppearance = nil
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true

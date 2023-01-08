@@ -22,6 +22,9 @@
 		B804FF99296B3B9C00EAF3E6 /* ImagePickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF98296B3B9C00EAF3E6 /* ImagePickerDelegate.swift */; };
 		B804FF9B296B4CDF00EAF3E6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF9A296B4CDF00EAF3E6 /* Profile.swift */; };
 		B804FF9E296B539F00EAF3E6 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF9D296B539F00EAF3E6 /* Defaults.swift */; };
+		B804FFA2296B641400EAF3E6 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FFA1296B641400EAF3E6 /* SplashRouter.swift */; };
+		B804FFA4296B649800EAF3E6 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FFA3296B649800EAF3E6 /* SplashPresenter.swift */; };
+		B804FFA6296B64C100EAF3E6 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FFA5296B64C100EAF3E6 /* SplashView.swift */; };
 		B8381A90296A44C60037B565 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8381A8F296A44C60037B565 /* LoginRouter.swift */; };
 		B876D9CC296A134000405D42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B876D9CB296A134000405D42 /* AppDelegate.swift */; };
 		B876D9D5296A134200405D42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B876D9D4296A134200405D42 /* Assets.xcassets */; };
@@ -51,6 +54,9 @@
 		B804FF98296B3B9C00EAF3E6 /* ImagePickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerDelegate.swift; sourceTree = "<group>"; };
 		B804FF9A296B4CDF00EAF3E6 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		B804FF9D296B539F00EAF3E6 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		B804FFA1296B641400EAF3E6 /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
+		B804FFA3296B649800EAF3E6 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		B804FFA5296B64C100EAF3E6 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		B8381A8F296A44C60037B565 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		B876D9C8296A134000405D42 /* UpaxTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpaxTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B876D9CB296A134000405D42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +157,16 @@
 			path = LocalStorage;
 			sourceTree = "<group>";
 		};
+		B804FF9F296B63EB00EAF3E6 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				B804FFA1296B641400EAF3E6 /* SplashRouter.swift */,
+				B804FFA3296B649800EAF3E6 /* SplashPresenter.swift */,
+				B804FFA5296B64C100EAF3E6 /* SplashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		B8381A8D296A446D0037B565 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +207,7 @@
 		B876D9CA296A134000405D42 /* UpaxTest */ = {
 			isa = PBXGroup;
 			children = (
+				B804FF9F296B63EB00EAF3E6 /* Splash */,
 				B804FF9C296B538C00EAF3E6 /* LocalStorage */,
 				B804FF93296B3A6F00EAF3E6 /* ImagePickerManager */,
 				B804FF68296AB99200EAF3E6 /* Register */,
@@ -345,6 +362,7 @@
 			files = (
 				B89C8870296A50DA002240C5 /* LoginPresenter.swift in Sources */,
 				B804FF6C296ABA5600EAF3E6 /* HomeView.swift in Sources */,
+				B804FFA6296B64C100EAF3E6 /* SplashView.swift in Sources */,
 				B804FF67296AAFF300EAF3E6 /* UIViewController+AlertController.swift in Sources */,
 				B804FF95296B3A8700EAF3E6 /* ImagePicker.swift in Sources */,
 				B804FF99296B3B9C00EAF3E6 /* ImagePickerDelegate.swift in Sources */,
@@ -354,9 +372,11 @@
 				B804FF6E296ABAC500EAF3E6 /* RegisterInteractor.swift in Sources */,
 				B89C887F296A5AA5002240C5 /* ImageCatalog.swift in Sources */,
 				B804FF9B296B4CDF00EAF3E6 /* Profile.swift in Sources */,
+				B804FFA4296B649800EAF3E6 /* SplashPresenter.swift in Sources */,
 				B804FF72296ABC8500EAF3E6 /* RegisterView.swift in Sources */,
 				B89C8883296A5AFA002240C5 /* CustomTextField.swift in Sources */,
 				B804FF97296B3B1F00EAF3E6 /* ImagePickerExtensions.swift in Sources */,
+				B804FFA2296B641400EAF3E6 /* SplashRouter.swift in Sources */,
 				B876D9CC296A134000405D42 /* AppDelegate.swift in Sources */,
 				B89C8872296A50F2002240C5 /* LoginInteractor.swift in Sources */,
 				B89C8879296A52D9002240C5 /* LoginView.swift in Sources */,

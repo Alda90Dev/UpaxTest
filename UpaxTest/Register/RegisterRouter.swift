@@ -13,7 +13,6 @@ protocol RegisterRouterProtocol {
     var presenter: RegisterPresenterProtocol? { get set }
     static func createRegisterModule() -> UIViewController
     func goToHome(from view: RegisterViewProtocol)
-    func goToLogin(from view: RegisterViewProtocol)
 }
 
 
@@ -43,10 +42,13 @@ class RegisterRouter: RegisterRouterProtocol {
     }
     
     func goToHome(from view: RegisterViewProtocol) {
-       
+        if let vc = view as? UIViewController {
+            let homeView = HomeView()
+            let navVC = UINavigationController(rootViewController: homeView)
+            navVC.modalTransitionStyle = .crossDissolve
+            navVC.modalPresentationStyle = .fullScreen
+            vc.present(navVC, animated: true)
+        }
     }
     
-    func goToLogin(from view: RegisterViewProtocol) {
-        
-    }
 }
