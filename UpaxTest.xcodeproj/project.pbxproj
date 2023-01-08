@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		935EE722FB49C17D2F2F1C58 /* Pods_UpaxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4CDF64D7CD38B9465B3762 /* Pods_UpaxTest.framework */; };
 		B876D9CC296A134000405D42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B876D9CB296A134000405D42 /* AppDelegate.swift */; };
 		B876D9D0296A134000405D42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B876D9CF296A134000405D42 /* ViewController.swift */; };
 		B876D9D5296A134200405D42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B876D9D4296A134200405D42 /* Assets.xcassets */; };
@@ -14,12 +15,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB4CDF64D7CD38B9465B3762 /* Pods_UpaxTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UpaxTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B876D9C8296A134000405D42 /* UpaxTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpaxTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B876D9CB296A134000405D42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B876D9CF296A134000405D42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B876D9D4296A134200405D42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B876D9D7296A134200405D42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B876D9D9296A134200405D42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D60860DC6DCF504FBA05F636 /* Pods-UpaxTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpaxTest.debug.xcconfig"; path = "Target Support Files/Pods-UpaxTest/Pods-UpaxTest.debug.xcconfig"; sourceTree = "<group>"; };
+		EA755A27918A8605348D44EC /* Pods-UpaxTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpaxTest.release.xcconfig"; path = "Target Support Files/Pods-UpaxTest/Pods-UpaxTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +31,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				935EE722FB49C17D2F2F1C58 /* Pods_UpaxTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		143AC24A9424DBA024621170 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D60860DC6DCF504FBA05F636 /* Pods-UpaxTest.debug.xcconfig */,
+				EA755A27918A8605348D44EC /* Pods-UpaxTest.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		24DA87B82BA7CA97658C4395 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB4CDF64D7CD38B9465B3762 /* Pods_UpaxTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B876D9BF296A134000405D42 = {
 			isa = PBXGroup;
 			children = (
 				B876D9CA296A134000405D42 /* UpaxTest */,
 				B876D9C9296A134000405D42 /* Products */,
+				143AC24A9424DBA024621170 /* Pods */,
+				24DA87B82BA7CA97658C4395 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,9 +93,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B876D9DC296A134200405D42 /* Build configuration list for PBXNativeTarget "UpaxTest" */;
 			buildPhases = (
+				A04834DAC07E83CE53D6FA8A /* [CP] Check Pods Manifest.lock */,
 				B876D9C4296A134000405D42 /* Sources */,
 				B876D9C5296A134000405D42 /* Frameworks */,
 				B876D9C6296A134000405D42 /* Resources */,
+				D9F82A235A207A9D10E2BAA3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +152,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A04834DAC07E83CE53D6FA8A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UpaxTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9F82A235A207A9D10E2BAA3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UpaxTest/Pods-UpaxTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UpaxTest/Pods-UpaxTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UpaxTest/Pods-UpaxTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B876D9C4296A134000405D42 /* Sources */ = {
@@ -266,6 +335,7 @@
 		};
 		B876D9DD296A134200405D42 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D60860DC6DCF504FBA05F636 /* Pods-UpaxTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -294,6 +364,7 @@
 		};
 		B876D9DE296A134200405D42 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA755A27918A8605348D44EC /* Pods-UpaxTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
