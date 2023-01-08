@@ -105,6 +105,12 @@ class RegisterView: UIViewController {
         return btn
     }()
     
+    private lazy var imagePicker: ImagePicker = {
+        let imagePicker = ImagePicker()
+        imagePicker.delegate = self
+        return imagePicker
+    }()
+    
     var presenter: RegisterPresenterProtocol?
 
     private var userValue: String?
@@ -182,7 +188,7 @@ private extension RegisterView {
     }
     
     @objc func tappedTakePicture() {
-        print("TAKE A PICTURE")
+        imagePicker.cameraAsscessRequest()
     }
     
     func isInputValid() -> (Bool, String, String, String)? {
@@ -279,4 +285,21 @@ extension RegisterView: RegisterViewProtocol {
         }
     }
     
+}
+
+// MARK: ImagePickerDelegate
+
+extension RegisterView: ImagePickerDelegate {
+
+    func imagePicker(_ imagePicker: ImagePicker, didSelect image: UIImage) {
+        imgLogo.image = image
+        imagePicker.dismiss()
+    }
+
+    func cancelButtonDidClick(on imageView: ImagePicker) { imagePicker.dismiss() }
+    func imagePicker(_ imagePicker: ImagePicker, grantedAccess: Bool,
+                     to sourceType: UIImagePickerController.SourceType) {
+        guard grantedAccess else { return }
+        imagePicker.present(parent: self, sourceType: sourceType)
+    }
 }

@@ -17,6 +17,9 @@
 		B804FF6E296ABAC500EAF3E6 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF6D296ABAC500EAF3E6 /* RegisterInteractor.swift */; };
 		B804FF70296ABBCA00EAF3E6 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF6F296ABBCA00EAF3E6 /* RegisterPresenter.swift */; };
 		B804FF72296ABC8500EAF3E6 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF71296ABC8500EAF3E6 /* RegisterView.swift */; };
+		B804FF95296B3A8700EAF3E6 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF94296B3A8700EAF3E6 /* ImagePicker.swift */; };
+		B804FF97296B3B1F00EAF3E6 /* ImagePickerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF96296B3B1F00EAF3E6 /* ImagePickerExtensions.swift */; };
+		B804FF99296B3B9C00EAF3E6 /* ImagePickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FF98296B3B9C00EAF3E6 /* ImagePickerDelegate.swift */; };
 		B8381A90296A44C60037B565 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8381A8F296A44C60037B565 /* LoginRouter.swift */; };
 		B876D9CC296A134000405D42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B876D9CB296A134000405D42 /* AppDelegate.swift */; };
 		B876D9D5296A134200405D42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B876D9D4296A134200405D42 /* Assets.xcassets */; };
@@ -41,6 +44,9 @@
 		B804FF6D296ABAC500EAF3E6 /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
 		B804FF6F296ABBCA00EAF3E6 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 		B804FF71296ABC8500EAF3E6 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		B804FF94296B3A8700EAF3E6 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		B804FF96296B3B1F00EAF3E6 /* ImagePickerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerExtensions.swift; sourceTree = "<group>"; };
+		B804FF98296B3B9C00EAF3E6 /* ImagePickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerDelegate.swift; sourceTree = "<group>"; };
 		B8381A8F296A44C60037B565 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		B876D9C8296A134000405D42 /* UpaxTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpaxTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B876D9CB296A134000405D42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +128,16 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		B804FF93296B3A6F00EAF3E6 /* ImagePickerManager */ = {
+			isa = PBXGroup;
+			children = (
+				B804FF94296B3A8700EAF3E6 /* ImagePicker.swift */,
+				B804FF96296B3B1F00EAF3E6 /* ImagePickerExtensions.swift */,
+				B804FF98296B3B9C00EAF3E6 /* ImagePickerDelegate.swift */,
+			);
+			path = ImagePickerManager;
+			sourceTree = "<group>";
+		};
 		B8381A8D296A446D0037B565 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +178,7 @@
 		B876D9CA296A134000405D42 /* UpaxTest */ = {
 			isa = PBXGroup;
 			children = (
+				B804FF93296B3A6F00EAF3E6 /* ImagePickerManager */,
 				B804FF68296AB99200EAF3E6 /* Register */,
 				B804FF62296AA91200EAF3E6 /* NetworkManager */,
 				B804FF5D296A916C00EAF3E6 /* Firebase */,
@@ -315,6 +332,8 @@
 				B89C8870296A50DA002240C5 /* LoginPresenter.swift in Sources */,
 				B804FF6C296ABA5600EAF3E6 /* HomeView.swift in Sources */,
 				B804FF67296AAFF300EAF3E6 /* UIViewController+AlertController.swift in Sources */,
+				B804FF95296B3A8700EAF3E6 /* ImagePicker.swift in Sources */,
+				B804FF99296B3B9C00EAF3E6 /* ImagePickerDelegate.swift in Sources */,
 				B89C887D296A5A10002240C5 /* Content.swift in Sources */,
 				B804FF64296AA92E00EAF3E6 /* NetworkResult.swift in Sources */,
 				B804FF5F296A917E00EAF3E6 /* FirebaseManager.swift in Sources */,
@@ -322,6 +341,7 @@
 				B89C887F296A5AA5002240C5 /* ImageCatalog.swift in Sources */,
 				B804FF72296ABC8500EAF3E6 /* RegisterView.swift in Sources */,
 				B89C8883296A5AFA002240C5 /* CustomTextField.swift in Sources */,
+				B804FF97296B3B1F00EAF3E6 /* ImagePickerExtensions.swift in Sources */,
 				B876D9CC296A134000405D42 /* AppDelegate.swift in Sources */,
 				B89C8872296A50F2002240C5 /* LoginInteractor.swift in Sources */,
 				B89C8879296A52D9002240C5 /* LoginView.swift in Sources */,
@@ -471,6 +491,8 @@
 				DEVELOPMENT_TEAM = 6K7VRQC2P5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UpaxTest/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Please allow the media library usage";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow the camera usage";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -500,9 +522,10 @@
 				DEVELOPMENT_TEAM = 6K7VRQC2P5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UpaxTest/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Please allow the media library usage";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow the camera usage";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
