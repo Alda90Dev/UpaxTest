@@ -43,9 +43,9 @@ class TabBarView: UITabBarController {
         notificationsView.tabBarItem = UITabBarItem(title: nil, image: ImageCatalog.iconNotifications, tag: 4)
         let nav4 = UINavigationController(rootViewController: notificationsView)
 
-        let controller5 = UIViewController()
-        controller5.tabBarItem = UITabBarItem(title: nil, image: ImageCatalog.iconProfile, tag: 5)
-        let nav5 = UINavigationController(rootViewController: controller5)
+        let profileView = ProfileRouter.createProfileModule()
+        profileView.tabBarItem = UITabBarItem(title: nil, image: ImageCatalog.iconProfile, tag: 5)
+        let nav5 = UINavigationController(rootViewController: profileView)
 
         viewControllers = [nav1, nav2, nav3, nav4, nav5]
         

@@ -11,5 +11,6 @@ target 'UpaxTest' do
   pod 'FirebaseFirestoreSwift'
   pod 'Firebase/Storage'  
   pod 'SDWebImage'
+  pod 'ScrollableSegmentedControl', '~> 1.3.0'
   
 end

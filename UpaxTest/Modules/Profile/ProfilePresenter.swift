@@ -1,30 +1,30 @@
 //
-//  HomePresenter.swift
+//  ProfilePresenter.swift
 //  UpaxTest
 //
-//  Created by Aldair Carrillo on 08/01/23.
+//  Created by Aldair Carrillo on 09/01/23.
 //
 
 import Foundation
 
-/////////////////////// HOME PRESENTER PROTOCOL
-protocol HomePresenterProtocol: AnyObject {
-    var view: HomeViewProtocol? { get set }
-    var interactor: HomeInteractorInputProtocol? { get set }
-    var router: HomeRouterProtocol? { get set }
+/////////////////////// PROFILE PRESENTER PROTOCOL
+protocol ProfilePresenterProtocol: AnyObject {
+    var view: ProfileViewProtocol? { get set }
+    var interactor: ProfileInteractorInputProtocol? { get set }
+    var router: ProfileRouterProtocol? { get set }
     
     func getProducts()
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////// HOME PRESENTER
+/////////////////////// PROFILE PRESENTER
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-class HomePresenter: HomePresenterProtocol {
+class ProfilePresenter: ProfilePresenterProtocol {
     
-    weak var view: HomeViewProtocol?
-    var interactor: HomeInteractorInputProtocol?
-    var router: HomeRouterProtocol?
+    weak var view: ProfileViewProtocol?
+    var interactor: ProfileInteractorInputProtocol?
+    var router: ProfileRouterProtocol?
     
     func getProducts() {
         interactor?.getProducts(typeService: NetworkRouter.getProducts)
@@ -32,7 +32,7 @@ class HomePresenter: HomePresenterProtocol {
 
 }
 
-extension HomePresenter: HomeInteractorOutputProtocol {
+extension ProfilePresenter: ProfileInteractorOutputProtocol {
     
     func interactorGetDataPresenter(receivedData: NetworkResult<ProductResponse>) {
         switch receivedData {

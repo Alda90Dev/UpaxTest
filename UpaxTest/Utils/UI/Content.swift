@@ -22,6 +22,8 @@ struct Content {
     struct tab {
         static let inbox: String = "Inbox"
         static let notifications: String = "Notifications"
+        static let posts: String = "Posts"
+        static let liked: String = "Liked"
     }
     
     struct alert {
