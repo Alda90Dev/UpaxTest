@@ -28,6 +28,11 @@
 		B804FFAB296B6D1100EAF3E6 /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FFAA296B6D1100EAF3E6 /* TabBarRouter.swift */; };
 		B804FFAD296B6D8600EAF3E6 /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FFAC296B6D8600EAF3E6 /* TabBarPresenter.swift */; };
 		B804FFAF296B6E6500EAF3E6 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FFAE296B6E6500EAF3E6 /* TabBarView.swift */; };
+		B819E2CC296C42C500BBA5AD /* ChartsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B819E2CB296C42C500BBA5AD /* ChartsRouter.swift */; };
+		B819E2CE296C434800BBA5AD /* ChartsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B819E2CD296C434800BBA5AD /* ChartsInteractor.swift */; };
+		B819E2D0296C438B00BBA5AD /* ChartsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B819E2CF296C438B00BBA5AD /* ChartsPresenter.swift */; };
+		B819E2D2296C43E800BBA5AD /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B819E2D1296C43E800BBA5AD /* ChartsView.swift */; };
+		B819E2D5296C459000BBA5AD /* DataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B819E2D4296C459000BBA5AD /* DataResponse.swift */; };
 		B8378637296B93AF008D628F /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8378636296B93AF008D628F /* UIView+Extensions.swift */; };
 		B837863A296B9591008D628F /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8378639296B9591008D628F /* HomeRouter.swift */; };
 		B837863C296B95E0008D628F /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B837863B296B95E0008D628F /* HomeInteractor.swift */; };
@@ -63,6 +68,7 @@
 		B89C887F296A5AA5002240C5 /* ImageCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C887E296A5AA5002240C5 /* ImageCatalog.swift */; };
 		B89C8881296A5AC5002240C5 /* ColorCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C8880296A5AC5002240C5 /* ColorCatalog.swift */; };
 		B89C8883296A5AFA002240C5 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C8882296A5AFA002240C5 /* CustomTextField.swift */; };
+		B8FBEB89296C599100BA660C /* ChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FBEB88296C599100BA660C /* ChartCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +93,11 @@
 		B804FFAA296B6D1100EAF3E6 /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
 		B804FFAC296B6D8600EAF3E6 /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
 		B804FFAE296B6E6500EAF3E6 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		B819E2CB296C42C500BBA5AD /* ChartsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsRouter.swift; sourceTree = "<group>"; };
+		B819E2CD296C434800BBA5AD /* ChartsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsInteractor.swift; sourceTree = "<group>"; };
+		B819E2CF296C438B00BBA5AD /* ChartsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsPresenter.swift; sourceTree = "<group>"; };
+		B819E2D1296C43E800BBA5AD /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
+		B819E2D4296C459000BBA5AD /* DataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResponse.swift; sourceTree = "<group>"; };
 		B8378636296B93AF008D628F /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		B8378639296B9591008D628F /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		B837863B296B95E0008D628F /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
@@ -124,6 +135,7 @@
 		B89C887E296A5AA5002240C5 /* ImageCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCatalog.swift; sourceTree = "<group>"; };
 		B89C8880296A5AC5002240C5 /* ColorCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCatalog.swift; sourceTree = "<group>"; };
 		B89C8882296A5AFA002240C5 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		B8FBEB88296C599100BA660C /* ChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCell.swift; sourceTree = "<group>"; };
 		D60860DC6DCF504FBA05F636 /* Pods-UpaxTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpaxTest.debug.xcconfig"; path = "Target Support Files/Pods-UpaxTest/Pods-UpaxTest.debug.xcconfig"; sourceTree = "<group>"; };
 		EA755A27918A8605348D44EC /* Pods-UpaxTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpaxTest.release.xcconfig"; path = "Target Support Files/Pods-UpaxTest/Pods-UpaxTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -227,6 +239,7 @@
 		B804FFA7296B6C5F00EAF3E6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B819E2CA296C42B000BBA5AD /* Charts */,
 				B875E41E296C23A200B4260F /* Profile */,
 				B837865B296C0D6B008D628F /* Notifications */,
 				B837864C296C00F7008D628F /* Inbox */,
@@ -247,6 +260,26 @@
 				B804FFAE296B6E6500EAF3E6 /* TabBarView.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		B819E2CA296C42B000BBA5AD /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				B8FBEB87296C597C00BA660C /* View */,
+				B819E2D3296C457C00BBA5AD /* Model */,
+				B819E2CB296C42C500BBA5AD /* ChartsRouter.swift */,
+				B819E2CD296C434800BBA5AD /* ChartsInteractor.swift */,
+				B819E2CF296C438B00BBA5AD /* ChartsPresenter.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		B819E2D3296C457C00BBA5AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B819E2D4296C459000BBA5AD /* DataResponse.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B8378638296B9574008D628F /* Home */ = {
@@ -422,6 +455,15 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		B8FBEB87296C597C00BA660C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B819E2D1296C43E800BBA5AD /* ChartsView.swift */,
+				B8FBEB88296C599100BA660C /* ChartCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -541,14 +583,17 @@
 				B804FF6C296ABA5600EAF3E6 /* HomeView.swift in Sources */,
 				B804FFAF296B6E6500EAF3E6 /* TabBarView.swift in Sources */,
 				B804FFA6296B64C100EAF3E6 /* SplashView.swift in Sources */,
+				B819E2D5296C459000BBA5AD /* DataResponse.swift in Sources */,
 				B804FF67296AAFF300EAF3E6 /* UIViewController+AlertController.swift in Sources */,
 				B8378650296C018A008D628F /* InboxInteractor.swift in Sources */,
 				B837865D296C0DC6008D628F /* NotificationsRouter.swift in Sources */,
+				B819E2CE296C434800BBA5AD /* ChartsInteractor.swift in Sources */,
 				B804FF95296B3A8700EAF3E6 /* ImagePicker.swift in Sources */,
 				B8378647296BA591008D628F /* ProductResponse.swift in Sources */,
 				B804FF99296B3B9C00EAF3E6 /* ImagePickerDelegate.swift in Sources */,
 				B8378657296C04D3008D628F /* CommentResponse.swift in Sources */,
 				B89C887D296A5A10002240C5 /* Content.swift in Sources */,
+				B819E2CC296C42C500BBA5AD /* ChartsRouter.swift in Sources */,
 				B804FF64296AA92E00EAF3E6 /* NetworkResult.swift in Sources */,
 				B804FF5F296A917E00EAF3E6 /* FirebaseManager.swift in Sources */,
 				B8378642296B98FF008D628F /* NetworkManager.swift in Sources */,
@@ -570,6 +615,8 @@
 				B837865F296C0E48008D628F /* NotificationsInteractor.swift in Sources */,
 				B804FFAD296B6D8600EAF3E6 /* TabBarPresenter.swift in Sources */,
 				B837863A296B9591008D628F /* HomeRouter.swift in Sources */,
+				B8FBEB89296C599100BA660C /* ChartCell.swift in Sources */,
+				B819E2D2296C43E800BBA5AD /* ChartsView.swift in Sources */,
 				B876D9CC296A134000405D42 /* AppDelegate.swift in Sources */,
 				B837864E296C010F008D628F /* InboxRouter.swift in Sources */,
 				B875E41A296C118900B4260F /* PostResponse.swift in Sources */,
@@ -578,6 +625,7 @@
 				B89C8872296A50F2002240C5 /* LoginInteractor.swift in Sources */,
 				B89C8879296A52D9002240C5 /* LoginView.swift in Sources */,
 				B875E426296C251200B4260F /* ProfileView.swift in Sources */,
+				B819E2D0296C438B00BBA5AD /* ChartsPresenter.swift in Sources */,
 				B8378637296B93AF008D628F /* UIView+Extensions.swift in Sources */,
 				B89C8881296A5AC5002240C5 /* ColorCatalog.swift in Sources */,
 				B804FF6A296AB9CB00EAF3E6 /* RegisterRouter.swift in Sources */,
@@ -746,7 +794,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = aldaDev.UpaxTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -777,7 +825,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = aldaDev.UpaxTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

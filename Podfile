@@ -12,5 +12,6 @@ target 'UpaxTest' do
   pod 'Firebase/Storage'  
   pod 'SDWebImage'
   pod 'ScrollableSegmentedControl', '~> 1.3.0'
+  pod 'Charts', '~> 3.0.5'
   
 end

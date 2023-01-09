@@ -35,8 +35,8 @@ class TabBarView: UITabBarController {
         inboxView.tabBarItem =  UITabBarItem(title: nil, image: ImageCatalog.iconMessages, tag: 2)
         let nav2 = UINavigationController(rootViewController: inboxView)
 
-        let controller3 = UIViewController()
-        let nav3 = UINavigationController(rootViewController: controller3)
+        let chartsView = ChartsRouter.createChartsModule()
+        let nav3 = UINavigationController(rootViewController: chartsView)
         nav3.title = ""
 
         let notificationsView = NotificationsRouter.createNotificationsModule()

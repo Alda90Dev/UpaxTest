@@ -602,6 +602,9 @@ PODS:
   - BoringSSL-GRPC/Implementation (0.0.24):
     - BoringSSL-GRPC/Interface (= 0.0.24)
   - BoringSSL-GRPC/Interface (0.0.24)
+  - Charts (3.0.5):
+    - Charts/Core (= 3.0.5)
+  - Charts/Core (3.0.5)
   - Firebase/CoreOnly (10.3.0):
     - FirebaseCore (= 10.3.0)
   - Firebase/Storage (10.3.0):
@@ -733,6 +736,7 @@ PODS:
   - SDWebImage/Core (5.14.2)
 
 DEPENDENCIES:
+  - Charts (~> 3.0.5)
   - Firebase/Storage
   - FirebaseAuth
   - FirebaseFirestore
@@ -744,6 +748,7 @@ SPEC REPOS:
   trunk:
     - abseil
     - BoringSSL-GRPC
+    - Charts
     - Firebase
     - FirebaseAppCheckInterop
     - FirebaseAuth
@@ -769,6 +774,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   abseil: ebe5b5529fb05d93a8bdb7951607be08b7fa71bc
   BoringSSL-GRPC: 3175b25143e648463a56daeaaa499c6cb86dad33
+  Charts: 45cdc985b764c838b35ee47eb1365d15735f6d1a
   Firebase: f92fc551ead69c94168d36c2b26188263860acd9
   FirebaseAppCheckInterop: 9fc57dfa08f0abb737b185ea065422b55355c909
   FirebaseAuth: 0e415d29d846c1dce2fb641e46f35e9888d9bec6
@@ -791,6 +797,6 @@ SPEC CHECKSUMS:
   ScrollableSegmentedControl: a90ae91537fd670a46b177301d035223e3bd149e
   SDWebImage: b9a731e1d6307f44ca703b3976d18c24ca561e84
 
-PODFILE CHECKSUM: 1b3fa794bcdeaa767856393744fac9983e228d3c
+PODFILE CHECKSUM: 4a53d297f1eafd1d09ba57ab49f76600434e654a
 
 COCOAPODS: 1.9.3

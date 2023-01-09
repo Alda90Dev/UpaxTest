@@ -11,8 +11,10 @@ enum NetworkRouter {
     case getProducts
     case getComments
     case getPosts
+    case getData
     
     private static let baseURLString = "https://dummyjson.com"
+    private static let dataURLString = "https://s3.amazonaws.com/dev.reports.files"
     
     private enum HTTTPMethod {
         case get
@@ -31,6 +33,7 @@ enum NetworkRouter {
         case .getProducts: return .get
         case .getComments: return .get
         case .getPosts: return .get
+        case .getData: return .get
         }
     }
     
@@ -42,11 +45,13 @@ enum NetworkRouter {
             return "/comments"
         case .getPosts:
             return "/posts"
+        case .getData:
+            return "/test.json"
         }
     }
     
     func request() throws -> URLRequest {
-        let urlString = "\(NetworkRouter.baseURLString)\(path)"
+        let urlString = self == .getData ? "\(NetworkRouter.dataURLString)\(path)" : "\(NetworkRouter.baseURLString)\(path)"
         
         guard let baseURL = URL(string: urlString)
                 else { throw NetworkErrorType.parseUrlFail }
