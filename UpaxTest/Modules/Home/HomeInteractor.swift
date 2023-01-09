@@ -9,7 +9,7 @@ import Foundation
 
 /////////////////////// HOME INTERACTOR PROTOCOLS
 protocol HomeInteractorOutputProtocol: AnyObject {
-    func interactorGetDataPresenter(receivedData: String?, error: Error?)
+    func interactorGetDataPresenter(receivedData: NetworkResult<ProductResponse>)
 }
 
 protocol HomeInteractorInputProtocol {
@@ -26,14 +26,8 @@ class HomeInteractor: HomeInteractorInputProtocol {
     weak var presenter: HomeInteractorOutputProtocol?
     
     func getProducts(typeService: NetworkRouter) {
-        NetworkManager.shared.request(networkRouter: typeService) { [weak self] (result: NetworkResult<String>) in
-            switch result {
-            case .success(let response):
-                self?.presenter?.interactorGetDataPresenter(receivedData: response, error: nil)
-                break
-            case .failure(error: let error):
-                self?.presenter?.interactorGetDataPresenter(receivedData: nil, error: error)
-            }
+        NetworkManager.shared.request(networkRouter: typeService) { [weak self] (result: NetworkResult<ProductResponse>) in
+            self?.presenter?.interactorGetDataPresenter(receivedData: result)
         }
     }
     

@@ -8,7 +8,7 @@
 import Foundation
 
 enum NetworkRouter {
-    case getProducts(page: String)
+    case getProducts
     
     private static let baseURLString = "https://dummyjson.com"
     
@@ -40,13 +40,10 @@ enum NetworkRouter {
     func request() throws -> URLRequest {
         let urlString = "\(NetworkRouter.baseURLString)\(path)"
         
-        guard let baseURL = URL(string: urlString),
-              var components = URLComponents(url: baseURL, resolvingAgainstBaseURL: false)
+        guard let baseURL = URL(string: urlString)
                 else { throw NetworkErrorType.parseUrlFail }
         
-        guard let url = components.url else { throw NetworkErrorType.parseUrlFail }
-        
-        var request = URLRequest(url: url)
+        var request = URLRequest(url: baseURL)
         request.httpMethod = method.value
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         

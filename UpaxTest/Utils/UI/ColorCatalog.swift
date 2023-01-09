@@ -13,4 +13,5 @@ struct ColorCatalog {
     static let placeholder: UIColor = UIColor(named: "placeholder") ?? UIColor()
     static let principal: UIColor = UIColor(named: "principal") ?? UIColor()
     static let text: UIColor = UIColor(named: "text") ?? UIColor()
+    static let backgroundTab: UIColor = UIColor(named: "backgroundTab") ?? UIColor()
 }

@@ -19,9 +19,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-        UINavigationBar.appearance().tintColor = ColorCatalog.dark
-        UINavigationBar.appearance().backgroundColor = .white
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: ColorCatalog.dark]
+        if #available(iOS 15, *) {
+            let navigationBarAppearance = UINavigationBarAppearance()
+            navigationBarAppearance.configureWithOpaqueBackground()
+            navigationBarAppearance.titleTextAttributes = [ NSAttributedString.Key.foregroundColor : ColorCatalog.dark ]
+            
+            navigationBarAppearance.backgroundColor = .white
+            UINavigationBar.appearance().standardAppearance = navigationBarAppearance
+            UINavigationBar.appearance().compactAppearance = navigationBarAppearance
+            UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+                    
+            let tabBarApperance = UITabBarAppearance()
+            tabBarApperance.configureWithOpaqueBackground()
+            tabBarApperance.backgroundColor = .white
+            UITabBar.appearance().scrollEdgeAppearance = tabBarApperance
+            UITabBar.appearance().standardAppearance = tabBarApperance
+            
+        } else {
+            UINavigationBar.appearance().isOpaque = true
+            UINavigationBar.appearance().tintColor = ColorCatalog.dark
+            UINavigationBar.appearance().backgroundColor = .white
+            UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: ColorCatalog.dark]
+        }
         
         window = UIWindow(frame: UIScreen.main.bounds)
         let splashView = SplashRouter.createSplashModule()

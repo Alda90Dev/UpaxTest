@@ -34,6 +34,8 @@
 		B837863E296B965D008D628F /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B837863D296B965D008D628F /* HomePresenter.swift */; };
 		B8378640296B981F008D628F /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B837863F296B981F008D628F /* NetworkRouter.swift */; };
 		B8378642296B98FF008D628F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8378641296B98FF008D628F /* NetworkManager.swift */; };
+		B8378647296BA591008D628F /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8378646296BA591008D628F /* ProductResponse.swift */; };
+		B837864A296BAAEE008D628F /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8378649296BAAEE008D628F /* ProductCell.swift */; };
 		B8381A90296A44C60037B565 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8381A8F296A44C60037B565 /* LoginRouter.swift */; };
 		B876D9CC296A134000405D42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B876D9CB296A134000405D42 /* AppDelegate.swift */; };
 		B876D9D5296A134200405D42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B876D9D4296A134200405D42 /* Assets.xcassets */; };
@@ -75,6 +77,8 @@
 		B837863D296B965D008D628F /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		B837863F296B981F008D628F /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		B8378641296B98FF008D628F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B8378646296BA591008D628F /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
+		B8378649296BAAEE008D628F /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		B8381A8F296A44C60037B565 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		B876D9C8296A134000405D42 /* UpaxTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpaxTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B876D9CB296A134000405D42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -213,12 +217,30 @@
 		B8378638296B9574008D628F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B8378648296BAAC8008D628F /* View */,
+				B8378645296BA584008D628F /* Model */,
 				B8378639296B9591008D628F /* HomeRouter.swift */,
 				B837863B296B95E0008D628F /* HomeInteractor.swift */,
 				B837863D296B965D008D628F /* HomePresenter.swift */,
-				B804FF6B296ABA5600EAF3E6 /* HomeView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		B8378645296BA584008D628F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B8378646296BA591008D628F /* ProductResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B8378648296BAAC8008D628F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B804FF6B296ABA5600EAF3E6 /* HomeView.swift */,
+				B8378649296BAAEE008D628F /* ProductCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B8381A8D296A446D0037B565 /* App */ = {
@@ -417,6 +439,7 @@
 				B804FFA6296B64C100EAF3E6 /* SplashView.swift in Sources */,
 				B804FF67296AAFF300EAF3E6 /* UIViewController+AlertController.swift in Sources */,
 				B804FF95296B3A8700EAF3E6 /* ImagePicker.swift in Sources */,
+				B8378647296BA591008D628F /* ProductResponse.swift in Sources */,
 				B804FF99296B3B9C00EAF3E6 /* ImagePickerDelegate.swift in Sources */,
 				B89C887D296A5A10002240C5 /* Content.swift in Sources */,
 				B804FF64296AA92E00EAF3E6 /* NetworkResult.swift in Sources */,
@@ -443,6 +466,7 @@
 				B89C8881296A5AC5002240C5 /* ColorCatalog.swift in Sources */,
 				B804FF6A296AB9CB00EAF3E6 /* RegisterRouter.swift in Sources */,
 				B8381A90296A44C60037B565 /* LoginRouter.swift in Sources */,
+				B837864A296BAAEE008D628F /* ProductCell.swift in Sources */,
 				B804FF70296ABBCA00EAF3E6 /* RegisterPresenter.swift in Sources */,
 				B804FF9E296B539F00EAF3E6 /* Defaults.swift in Sources */,
 			);

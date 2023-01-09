@@ -26,15 +26,20 @@ class HomePresenter: HomePresenterProtocol {
     var router: HomeRouterProtocol?
     
     func getProducts() {
-        
+        interactor?.getProducts(typeService: NetworkRouter.getProducts)
     }
 
 }
 
 extension HomePresenter: HomeInteractorOutputProtocol {
     
-    func interactorGetDataPresenter(receivedData: String?, error: Error?) {
-        
+    func interactorGetDataPresenter(receivedData: NetworkResult<ProductResponse>) {
+        switch receivedData {
+        case .success(let data):
+            view?.getDataProducts(products: data.products)
+        case .failure(let error):
+            view?.dataError(error: error)
+        }
     }
     
 }

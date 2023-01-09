@@ -10,5 +10,6 @@ target 'UpaxTest' do
   pod 'FirebaseFirestore'
   pod 'FirebaseFirestoreSwift'
   pod 'Firebase/Storage'  
-
+  pod 'SDWebImage'
+  
 end
