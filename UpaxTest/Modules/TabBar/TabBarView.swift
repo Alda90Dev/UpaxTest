@@ -39,9 +39,9 @@ class TabBarView: UITabBarController {
         let nav3 = UINavigationController(rootViewController: controller3)
         nav3.title = ""
 
-        let controller4 = UIViewController()
-        controller4.tabBarItem = UITabBarItem(title: nil, image: ImageCatalog.iconNotifications, tag: 4)
-        let nav4 = UINavigationController(rootViewController: controller4)
+        let notificationsView = NotificationsRouter.createNotificationsModule()
+        notificationsView.tabBarItem = UITabBarItem(title: nil, image: ImageCatalog.iconNotifications, tag: 4)
+        let nav4 = UINavigationController(rootViewController: notificationsView)
 
         let controller5 = UIViewController()
         controller5.tabBarItem = UITabBarItem(title: nil, image: ImageCatalog.iconProfile, tag: 5)

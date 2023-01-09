@@ -42,7 +42,13 @@
 		B8378654296C026B008D628F /* InboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8378653296C026B008D628F /* InboxView.swift */; };
 		B8378657296C04D3008D628F /* CommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8378656296C04D3008D628F /* CommentResponse.swift */; };
 		B837865A296C06A6008D628F /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8378659296C06A6008D628F /* CommentCell.swift */; };
+		B837865D296C0DC6008D628F /* NotificationsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B837865C296C0DC6008D628F /* NotificationsRouter.swift */; };
+		B837865F296C0E48008D628F /* NotificationsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B837865E296C0E48008D628F /* NotificationsInteractor.swift */; };
+		B8378661296C0EBB008D628F /* NotificationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8378660296C0EBB008D628F /* NotificationsPresenter.swift */; };
+		B8378663296C0F4E008D628F /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8378662296C0F4E008D628F /* NotificationsView.swift */; };
 		B8381A90296A44C60037B565 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8381A8F296A44C60037B565 /* LoginRouter.swift */; };
+		B875E41A296C118900B4260F /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B875E419296C118900B4260F /* PostResponse.swift */; };
+		B875E41D296C12F700B4260F /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B875E41C296C12F700B4260F /* PostCell.swift */; };
 		B876D9CC296A134000405D42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B876D9CB296A134000405D42 /* AppDelegate.swift */; };
 		B876D9D5296A134200405D42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B876D9D4296A134200405D42 /* Assets.xcassets */; };
 		B876D9D8296A134200405D42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B876D9D6296A134200405D42 /* LaunchScreen.storyboard */; };
@@ -91,7 +97,13 @@
 		B8378653296C026B008D628F /* InboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxView.swift; sourceTree = "<group>"; };
 		B8378656296C04D3008D628F /* CommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentResponse.swift; sourceTree = "<group>"; };
 		B8378659296C06A6008D628F /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		B837865C296C0DC6008D628F /* NotificationsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsRouter.swift; sourceTree = "<group>"; };
+		B837865E296C0E48008D628F /* NotificationsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsInteractor.swift; sourceTree = "<group>"; };
+		B8378660296C0EBB008D628F /* NotificationsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsPresenter.swift; sourceTree = "<group>"; };
+		B8378662296C0F4E008D628F /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		B8381A8F296A44C60037B565 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		B875E419296C118900B4260F /* PostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
+		B875E41C296C12F700B4260F /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		B876D9C8296A134000405D42 /* UpaxTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpaxTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B876D9CB296A134000405D42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B876D9D4296A134200405D42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -207,6 +219,7 @@
 		B804FFA7296B6C5F00EAF3E6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B837865B296C0D6B008D628F /* Notfications */,
 				B837864C296C00F7008D628F /* Inbox */,
 				B8378638296B9574008D628F /* Home */,
 				B804FFA8296B6CD200EAF3E6 /* TabBar */,
@@ -285,6 +298,26 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B837865B296C0D6B008D628F /* Notfications */ = {
+			isa = PBXGroup;
+			children = (
+				B875E41B296C12AA00B4260F /* View */,
+				B8378664296C10E5008D628F /* Model */,
+				B837865C296C0DC6008D628F /* NotificationsRouter.swift */,
+				B837865E296C0E48008D628F /* NotificationsInteractor.swift */,
+				B8378660296C0EBB008D628F /* NotificationsPresenter.swift */,
+			);
+			path = Notfications;
+			sourceTree = "<group>";
+		};
+		B8378664296C10E5008D628F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B875E419296C118900B4260F /* PostResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B8381A8D296A446D0037B565 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +335,15 @@
 				B89C8878296A52D9002240C5 /* LoginView.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		B875E41B296C12AA00B4260F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B8378662296C0F4E008D628F /* NotificationsView.swift */,
+				B875E41C296C12F700B4260F /* PostCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B876D9BF296A134000405D42 = {
@@ -481,6 +523,7 @@
 				B804FFA6296B64C100EAF3E6 /* SplashView.swift in Sources */,
 				B804FF67296AAFF300EAF3E6 /* UIViewController+AlertController.swift in Sources */,
 				B8378650296C018A008D628F /* InboxInteractor.swift in Sources */,
+				B837865D296C0DC6008D628F /* NotificationsRouter.swift in Sources */,
 				B804FF95296B3A8700EAF3E6 /* ImagePicker.swift in Sources */,
 				B8378647296BA591008D628F /* ProductResponse.swift in Sources */,
 				B804FF99296B3B9C00EAF3E6 /* ImagePickerDelegate.swift in Sources */,
@@ -489,6 +532,7 @@
 				B804FF64296AA92E00EAF3E6 /* NetworkResult.swift in Sources */,
 				B804FF5F296A917E00EAF3E6 /* FirebaseManager.swift in Sources */,
 				B8378642296B98FF008D628F /* NetworkManager.swift in Sources */,
+				B8378663296C0F4E008D628F /* NotificationsView.swift in Sources */,
 				B837863C296B95E0008D628F /* HomeInteractor.swift in Sources */,
 				B804FF6E296ABAC500EAF3E6 /* RegisterInteractor.swift in Sources */,
 				B89C887F296A5AA5002240C5 /* ImageCatalog.swift in Sources */,
@@ -497,12 +541,15 @@
 				B837863E296B965D008D628F /* HomePresenter.swift in Sources */,
 				B804FF72296ABC8500EAF3E6 /* RegisterView.swift in Sources */,
 				B89C8883296A5AFA002240C5 /* CustomTextField.swift in Sources */,
+				B8378661296C0EBB008D628F /* NotificationsPresenter.swift in Sources */,
 				B804FF97296B3B1F00EAF3E6 /* ImagePickerExtensions.swift in Sources */,
 				B804FFA2296B641400EAF3E6 /* SplashRouter.swift in Sources */,
+				B837865F296C0E48008D628F /* NotificationsInteractor.swift in Sources */,
 				B804FFAD296B6D8600EAF3E6 /* TabBarPresenter.swift in Sources */,
 				B837863A296B9591008D628F /* HomeRouter.swift in Sources */,
 				B876D9CC296A134000405D42 /* AppDelegate.swift in Sources */,
 				B837864E296C010F008D628F /* InboxRouter.swift in Sources */,
+				B875E41A296C118900B4260F /* PostResponse.swift in Sources */,
 				B8378640296B981F008D628F /* NetworkRouter.swift in Sources */,
 				B804FFAB296B6D1100EAF3E6 /* TabBarRouter.swift in Sources */,
 				B89C8872296A50F2002240C5 /* LoginInteractor.swift in Sources */,
@@ -517,6 +564,7 @@
 				B804FF70296ABBCA00EAF3E6 /* RegisterPresenter.swift in Sources */,
 				B804FF9E296B539F00EAF3E6 /* Defaults.swift in Sources */,
 				B837865A296C06A6008D628F /* CommentCell.swift in Sources */,
+				B875E41D296C12F700B4260F /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

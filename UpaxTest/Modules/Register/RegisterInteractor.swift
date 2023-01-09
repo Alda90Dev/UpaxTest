@@ -71,7 +71,21 @@ private extension RegisterInteractor {
                 self?.presenter?.interactorGetDataPresenter(result: NetworkResult.failure(error: NetworkErrorType.customizedError(message: error.localizedDescription)))
             }
             
-            self?.presenter?.interactorGetDataPresenter(result: resultRegister)
+            self?.getImageUrl()
+        }
+    }
+    
+    func getImageUrl() {
+        guard let profile = profile,
+              let resultRegister = resultRegister else { return }
+        firebase.getImage(name: profile.name) { [weak self] (result: NetworkResult<String>) in
+            switch result {
+            case .success(let url):
+                Defaults.shared.avatar = url
+                self?.presenter?.interactorGetDataPresenter(result: resultRegister)
+            case .failure(let error):
+                self?.presenter?.interactorGetDataPresenter(result: NetworkResult.failure(error: NetworkErrorType.customizedError(message: error.localizedDescription)))
+            }
         }
     }
 }

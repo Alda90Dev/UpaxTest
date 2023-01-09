@@ -10,6 +10,7 @@ import Foundation
 enum NetworkRouter {
     case getProducts
     case getComments
+    case getPosts
     
     private static let baseURLString = "https://dummyjson.com"
     
@@ -29,6 +30,7 @@ enum NetworkRouter {
         switch self {
         case .getProducts: return .get
         case .getComments: return .get
+        case .getPosts: return .get
         }
     }
     
@@ -38,6 +40,8 @@ enum NetworkRouter {
             return "/products"
         case .getComments:
             return "/comments"
+        case .getPosts:
+            return "/posts"
         }
     }
     
