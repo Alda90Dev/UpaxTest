@@ -9,6 +9,7 @@ import Foundation
 
 enum NetworkRouter {
     case getProducts
+    case getComments
     
     private static let baseURLString = "https://dummyjson.com"
     
@@ -27,6 +28,7 @@ enum NetworkRouter {
     private var method: HTTTPMethod {
         switch self {
         case .getProducts: return .get
+        case .getComments: return .get
         }
     }
     
@@ -34,6 +36,8 @@ enum NetworkRouter {
         switch self {
         case .getProducts:
             return "/products"
+        case .getComments:
+            return "/comments"
         }
     }
     

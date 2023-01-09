@@ -36,6 +36,12 @@
 		B8378642296B98FF008D628F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8378641296B98FF008D628F /* NetworkManager.swift */; };
 		B8378647296BA591008D628F /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8378646296BA591008D628F /* ProductResponse.swift */; };
 		B837864A296BAAEE008D628F /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8378649296BAAEE008D628F /* ProductCell.swift */; };
+		B837864E296C010F008D628F /* InboxRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B837864D296C010F008D628F /* InboxRouter.swift */; };
+		B8378650296C018A008D628F /* InboxInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B837864F296C018A008D628F /* InboxInteractor.swift */; };
+		B8378652296C0203008D628F /* InboxPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8378651296C0203008D628F /* InboxPresenter.swift */; };
+		B8378654296C026B008D628F /* InboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8378653296C026B008D628F /* InboxView.swift */; };
+		B8378657296C04D3008D628F /* CommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8378656296C04D3008D628F /* CommentResponse.swift */; };
+		B837865A296C06A6008D628F /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8378659296C06A6008D628F /* CommentCell.swift */; };
 		B8381A90296A44C60037B565 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8381A8F296A44C60037B565 /* LoginRouter.swift */; };
 		B876D9CC296A134000405D42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B876D9CB296A134000405D42 /* AppDelegate.swift */; };
 		B876D9D5296A134200405D42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B876D9D4296A134200405D42 /* Assets.xcassets */; };
@@ -79,6 +85,12 @@
 		B8378641296B98FF008D628F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B8378646296BA591008D628F /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
 		B8378649296BAAEE008D628F /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		B837864D296C010F008D628F /* InboxRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxRouter.swift; sourceTree = "<group>"; };
+		B837864F296C018A008D628F /* InboxInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxInteractor.swift; sourceTree = "<group>"; };
+		B8378651296C0203008D628F /* InboxPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxPresenter.swift; sourceTree = "<group>"; };
+		B8378653296C026B008D628F /* InboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxView.swift; sourceTree = "<group>"; };
+		B8378656296C04D3008D628F /* CommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentResponse.swift; sourceTree = "<group>"; };
+		B8378659296C06A6008D628F /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		B8381A8F296A44C60037B565 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		B876D9C8296A134000405D42 /* UpaxTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpaxTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B876D9CB296A134000405D42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -195,6 +207,7 @@
 		B804FFA7296B6C5F00EAF3E6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B837864C296C00F7008D628F /* Inbox */,
 				B8378638296B9574008D628F /* Home */,
 				B804FFA8296B6CD200EAF3E6 /* TabBar */,
 				B804FF68296AB99200EAF3E6 /* Register */,
@@ -239,6 +252,35 @@
 			children = (
 				B804FF6B296ABA5600EAF3E6 /* HomeView.swift */,
 				B8378649296BAAEE008D628F /* ProductCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B837864C296C00F7008D628F /* Inbox */ = {
+			isa = PBXGroup;
+			children = (
+				B8378658296C068B008D628F /* View */,
+				B8378655296C04BF008D628F /* Model */,
+				B837864D296C010F008D628F /* InboxRouter.swift */,
+				B837864F296C018A008D628F /* InboxInteractor.swift */,
+				B8378651296C0203008D628F /* InboxPresenter.swift */,
+			);
+			path = Inbox;
+			sourceTree = "<group>";
+		};
+		B8378655296C04BF008D628F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B8378656296C04D3008D628F /* CommentResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B8378658296C068B008D628F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B8378653296C026B008D628F /* InboxView.swift */,
+				B8378659296C06A6008D628F /* CommentCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -438,9 +480,11 @@
 				B804FFAF296B6E6500EAF3E6 /* TabBarView.swift in Sources */,
 				B804FFA6296B64C100EAF3E6 /* SplashView.swift in Sources */,
 				B804FF67296AAFF300EAF3E6 /* UIViewController+AlertController.swift in Sources */,
+				B8378650296C018A008D628F /* InboxInteractor.swift in Sources */,
 				B804FF95296B3A8700EAF3E6 /* ImagePicker.swift in Sources */,
 				B8378647296BA591008D628F /* ProductResponse.swift in Sources */,
 				B804FF99296B3B9C00EAF3E6 /* ImagePickerDelegate.swift in Sources */,
+				B8378657296C04D3008D628F /* CommentResponse.swift in Sources */,
 				B89C887D296A5A10002240C5 /* Content.swift in Sources */,
 				B804FF64296AA92E00EAF3E6 /* NetworkResult.swift in Sources */,
 				B804FF5F296A917E00EAF3E6 /* FirebaseManager.swift in Sources */,
@@ -458,6 +502,7 @@
 				B804FFAD296B6D8600EAF3E6 /* TabBarPresenter.swift in Sources */,
 				B837863A296B9591008D628F /* HomeRouter.swift in Sources */,
 				B876D9CC296A134000405D42 /* AppDelegate.swift in Sources */,
+				B837864E296C010F008D628F /* InboxRouter.swift in Sources */,
 				B8378640296B981F008D628F /* NetworkRouter.swift in Sources */,
 				B804FFAB296B6D1100EAF3E6 /* TabBarRouter.swift in Sources */,
 				B89C8872296A50F2002240C5 /* LoginInteractor.swift in Sources */,
@@ -466,9 +511,12 @@
 				B89C8881296A5AC5002240C5 /* ColorCatalog.swift in Sources */,
 				B804FF6A296AB9CB00EAF3E6 /* RegisterRouter.swift in Sources */,
 				B8381A90296A44C60037B565 /* LoginRouter.swift in Sources */,
+				B8378652296C0203008D628F /* InboxPresenter.swift in Sources */,
 				B837864A296BAAEE008D628F /* ProductCell.swift in Sources */,
+				B8378654296C026B008D628F /* InboxView.swift in Sources */,
 				B804FF70296ABBCA00EAF3E6 /* RegisterPresenter.swift in Sources */,
 				B804FF9E296B539F00EAF3E6 /* Defaults.swift in Sources */,
+				B837865A296C06A6008D628F /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

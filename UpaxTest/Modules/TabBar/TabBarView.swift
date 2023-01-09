@@ -31,9 +31,9 @@ class TabBarView: UITabBarController {
         homeView.tabBarItem = UITabBarItem(title: nil, image: ImageCatalog.iconHome, tag: 1)
         let nav1 = UINavigationController(rootViewController: homeView)
 
-        let controller2 = UIViewController()
-        controller2.tabBarItem =  UITabBarItem(title: nil, image: ImageCatalog.iconMessages, tag: 2)
-        let nav2 = UINavigationController(rootViewController: controller2)
+        let inboxView = InboxRouter.createInboxModule()
+        inboxView.tabBarItem =  UITabBarItem(title: nil, image: ImageCatalog.iconMessages, tag: 2)
+        let nav2 = UINavigationController(rootViewController: inboxView)
 
         let controller3 = UIViewController()
         let nav3 = UINavigationController(rootViewController: controller3)

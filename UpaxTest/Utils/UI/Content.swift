@@ -17,7 +17,11 @@ struct Content {
     static let signUp: String = "Sign Up"
     static let errorMessage: String = "We are sorry, and error has ocurred!"
     static let hiMessage: String = "Hello Again. \n Welcome back."
-    static let new: String = "New Here?"    
+    static let new: String = "New Here?"
+    
+    struct tab {
+        static let inbox: String = "Inbox"
+    }
     
     struct alert {
         static let okMessage: String = "Ok"
