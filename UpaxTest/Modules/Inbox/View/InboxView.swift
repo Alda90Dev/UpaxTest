@@ -51,6 +51,10 @@ class InboxView: UIViewController {
 private extension InboxView {
     
     func setupView() {
+        
+        let rightBarButtonItem = UIBarButtonItem(image: ImageCatalog.search, style: .plain, target: self, action: #selector(didTapSearch))
+        navigationItem.rightBarButtonItem = rightBarButtonItem
+        
         view.backgroundColor = .white
         view.addSubview(tableView)
 
@@ -71,6 +75,9 @@ private extension InboxView {
                        actions: [ {_ in
             print(Content.alert.okMessage)
         },])
+    }
+    
+    @objc func didTapSearch() {
     }
 }
 

@@ -51,102 +51,6 @@ class ProfileView: UIViewController {
         return lbl
     }()
     
-    private lazy var firstStackView: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .vertical
-        stack.alignment = .center
-        stack.distribution = .fill
-        stack.spacing = 4
-        return stack
-    }()
-    
-    private lazy var lblNumPosts: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.numberOfLines = 1
-        lbl.textColor = ColorCatalog.dark
-        lbl.font = UIFont.systemFont(ofSize: 18.0)
-        lbl.textAlignment = .center
-        lbl.text = "21"
-        return lbl
-    }()
-    
-    private lazy var lblPost: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.numberOfLines = 1
-        lbl.textColor = ColorCatalog.text
-        lbl.font = UIFont.systemFont(ofSize: 14.0)
-        lbl.textAlignment = .center
-        lbl.text = "Posts"
-        return lbl
-    }()
-    
-    private lazy var secondStackView: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .vertical
-        stack.alignment = .center
-        stack.distribution = .fill
-        stack.spacing = 4
-        return stack
-    }()
-    
-    private lazy var lblNumFollowers: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.numberOfLines = 1
-        lbl.textColor = ColorCatalog.dark
-        lbl.font = UIFont.systemFont(ofSize: 18.0)
-        lbl.textAlignment = .center
-        lbl.text = "981"
-        return lbl
-    }()
-    
-    private lazy var lblFollowers: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.numberOfLines = 1
-        lbl.textColor = ColorCatalog.text
-        lbl.font = UIFont.systemFont(ofSize: 14.0)
-        lbl.textAlignment = .center
-        lbl.text = "Followers"
-        return lbl
-    }()
-    
-    private lazy var thirdStackView: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .vertical
-        stack.alignment = .center
-        stack.distribution = .fill
-        stack.spacing = 4
-        return stack
-    }()
-    
-    private lazy var lblNumFollowing: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.numberOfLines = 1
-        lbl.textColor = ColorCatalog.dark
-        lbl.font = UIFont.systemFont(ofSize: 18.0)
-        lbl.textAlignment = .center
-        lbl.text = "63"
-        return lbl
-    }()
-    
-    private lazy var lblFollowing: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.numberOfLines = 1
-        lbl.textColor = ColorCatalog.text
-        lbl.font = UIFont.systemFont(ofSize: 14.0)
-        lbl.textAlignment = .center
-        lbl.text = "Following"
-        return lbl
-    }()
-    
     private lazy var stackView: UIStackView = {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
@@ -213,18 +117,9 @@ private extension ProfileView {
         segmentedControl.insertSegment(withTitle: Content.tab.posts, at: 0)
         segmentedControl.insertSegment(withTitle: Content.tab.liked, at: 1)
         
-        firstStackView.addArrangedSubview(lblNumPosts)
-        firstStackView.addArrangedSubview(lblPost)
-        
-        secondStackView.addArrangedSubview(lblNumFollowers)
-        secondStackView.addArrangedSubview(lblFollowers)
-        
-        thirdStackView.addArrangedSubview(lblNumFollowing)
-        thirdStackView.addArrangedSubview(lblFollowing)
-        
-        stackView.addArrangedSubview(firstStackView)
-        stackView.addArrangedSubview(secondStackView)
-        stackView.addArrangedSubview(thirdStackView)
+        stackView.addArrangedSubview(StackValueRow(num: "21", title: "Posts"))
+        stackView.addArrangedSubview(StackValueRow(num: "981", title: "Followers"))
+        stackView.addArrangedSubview(StackValueRow(num: "63", title: "Following"))
         
         view.addSubview(imgUser)
         view.addSubview(lblName)

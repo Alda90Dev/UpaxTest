@@ -18,6 +18,8 @@ struct Content {
     static let errorMessage: String = "We are sorry, and error has ocurred!"
     static let hiMessage: String = "Hello Again. \n Welcome back."
     static let new: String = "New Here?"
+    static let allCategories: String = "All Categories"
+    static let place: String = "Tepic Nayarit"
     
     struct tab {
         static let inbox: String = "Inbox"

@@ -37,10 +37,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         } else {
             UINavigationBar.appearance().isOpaque = true
-            UINavigationBar.appearance().tintColor = ColorCatalog.dark
+            
             UINavigationBar.appearance().backgroundColor = .white
             UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: ColorCatalog.dark]
         }
+        UINavigationBar.appearance().tintColor = ColorCatalog.dark
         
         window = UIWindow(frame: UIScreen.main.bounds)
         let splashView = SplashRouter.createSplashModule()

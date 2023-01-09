@@ -69,6 +69,8 @@
 		B89C8881296A5AC5002240C5 /* ColorCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C8880296A5AC5002240C5 /* ColorCatalog.swift */; };
 		B89C8883296A5AFA002240C5 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C8882296A5AFA002240C5 /* CustomTextField.swift */; };
 		B8FBEB89296C599100BA660C /* ChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FBEB88296C599100BA660C /* ChartCell.swift */; };
+		B8FBEB8B296C687A00BA660C /* TitleBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FBEB8A296C687A00BA660C /* TitleBarView.swift */; };
+		B8FBEB8E296C74E000BA660C /* StackValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FBEB8D296C74E000BA660C /* StackValues.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +138,8 @@
 		B89C8880296A5AC5002240C5 /* ColorCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCatalog.swift; sourceTree = "<group>"; };
 		B89C8882296A5AFA002240C5 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		B8FBEB88296C599100BA660C /* ChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCell.swift; sourceTree = "<group>"; };
+		B8FBEB8A296C687A00BA660C /* TitleBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarView.swift; sourceTree = "<group>"; };
+		B8FBEB8D296C74E000BA660C /* StackValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackValues.swift; sourceTree = "<group>"; };
 		D60860DC6DCF504FBA05F636 /* Pods-UpaxTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpaxTest.debug.xcconfig"; path = "Target Support Files/Pods-UpaxTest/Pods-UpaxTest.debug.xcconfig"; sourceTree = "<group>"; };
 		EA755A27918A8605348D44EC /* Pods-UpaxTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpaxTest.release.xcconfig"; path = "Target Support Files/Pods-UpaxTest/Pods-UpaxTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -307,6 +311,7 @@
 			children = (
 				B804FF6B296ABA5600EAF3E6 /* HomeView.swift */,
 				B8378649296BAAEE008D628F /* ProductCell.swift */,
+				B8FBEB8A296C687A00BA660C /* TitleBarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -391,10 +396,10 @@
 		B875E41E296C23A200B4260F /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				B8FBEB8C296C74B300BA660C /* View */,
 				B875E41F296C23B400B4260F /* ProfileRouter.swift */,
 				B875E421296C244F00B4260F /* ProfilePresenter.swift */,
 				B875E423296C245D00B4260F /* ProfileInteractor.swift */,
-				B875E425296C251200B4260F /* ProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -460,6 +465,15 @@
 			children = (
 				B819E2D1296C43E800BBA5AD /* ChartsView.swift */,
 				B8FBEB88296C599100BA660C /* ChartCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B8FBEB8C296C74B300BA660C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B875E425296C251200B4260F /* ProfileView.swift */,
+				B8FBEB8D296C74E000BA660C /* StackValues.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -581,6 +595,7 @@
 			files = (
 				B89C8870296A50DA002240C5 /* LoginPresenter.swift in Sources */,
 				B804FF6C296ABA5600EAF3E6 /* HomeView.swift in Sources */,
+				B8FBEB8E296C74E000BA660C /* StackValues.swift in Sources */,
 				B804FFAF296B6E6500EAF3E6 /* TabBarView.swift in Sources */,
 				B804FFA6296B64C100EAF3E6 /* SplashView.swift in Sources */,
 				B819E2D5296C459000BBA5AD /* DataResponse.swift in Sources */,
@@ -617,6 +632,7 @@
 				B837863A296B9591008D628F /* HomeRouter.swift in Sources */,
 				B8FBEB89296C599100BA660C /* ChartCell.swift in Sources */,
 				B819E2D2296C43E800BBA5AD /* ChartsView.swift in Sources */,
+				B8FBEB8B296C687A00BA660C /* TitleBarView.swift in Sources */,
 				B876D9CC296A134000405D42 /* AppDelegate.swift in Sources */,
 				B837864E296C010F008D628F /* InboxRouter.swift in Sources */,
 				B875E41A296C118900B4260F /* PostResponse.swift in Sources */,

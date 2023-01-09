@@ -36,6 +36,8 @@ class HomeView: UIViewController {
     
     private var products: [Product]?
     
+    var controladorDeBusca: UISearchController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -50,8 +52,13 @@ class HomeView: UIViewController {
 private extension HomeView {
     
     func setupView() {
-        let barButtonItem = UIBarButtonItem(customView: setTitle(title: "All Categories", subtitle: "Apple"))
-        navigationItem.leftBarButtonItem = barButtonItem
+        let titleView = TitleBarView()
+        titleView.setup(Content.allCategories, subtitle: Content.place)
+        let leftBarButtonItem = UIBarButtonItem(customView: titleView)
+        
+        let rightBarButtonItem = UIBarButtonItem(image: ImageCatalog.search, style: .plain, target: self, action: #selector(didTapSearch))
+        navigationItem.leftBarButtonItem = leftBarButtonItem
+        navigationItem.rightBarButtonItem = rightBarButtonItem
         
         view.backgroundColor = .white
         view.addSubview(tableView)
@@ -75,39 +82,10 @@ private extension HomeView {
         },])
     }
     
-    func setTitle(title:String, subtitle:String) -> UIView {
-        let titleLabel = UILabel(frame: CGRectMake(0, -2, 0, 0))
-
-        titleLabel.backgroundColor = .clear
-        titleLabel.textColor = ColorCatalog.dark
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 17)
-        titleLabel.text = title
-        titleLabel.sizeToFit()
-
-        let subtitleLabel = UILabel(frame: CGRectMake(0, 18, 0, 0))
-        subtitleLabel.backgroundColor = .clear
-        subtitleLabel.textColor = ColorCatalog.placeholder
-        subtitleLabel.font = UIFont.systemFont(ofSize: 12)
-        subtitleLabel.text = subtitle
-        subtitleLabel.sizeToFit()
-
-        let titleView = UIView(frame: CGRectMake(0, 0, max(titleLabel.frame.size.width, subtitleLabel.frame.size.width), 30))
-        titleView.addSubview(titleLabel)
-        titleView.addSubview(subtitleLabel)
-
-        let widthDiff = subtitleLabel.frame.size.width - titleLabel.frame.size.width
-
-        if widthDiff < 0 {
-            let newX = widthDiff / 2
-            subtitleLabel.frame.origin.x = abs(newX)
-        } else {
-            let newX = widthDiff / 2
-            titleLabel.frame.origin.x = newX
-        }
-
-        return titleView
+    @objc func didTapSearch() {
     }
 }
+
 
 extension HomeView: HomeViewProtocol {
     
