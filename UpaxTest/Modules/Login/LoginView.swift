@@ -209,6 +209,7 @@ private extension LoginView {
                 self.btnLogin.isEnabled = false
                 self.txtPassword.resignFirstResponder()
             }
+            showIndicator()
             presenter?.tapToLogin(input: (input.1, input.2))
         }
     }
@@ -290,6 +291,7 @@ extension LoginView: UITextFieldDelegate {
 extension LoginView: LoginViewProtocol {
     
     func loginDataError(error: Error?) {
+        hideIndicator()
         guard let error = error else {
             return
         }

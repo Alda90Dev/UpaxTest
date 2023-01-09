@@ -20,4 +20,5 @@ struct ImageCatalog {
     static let heartFilled: UIImage = UIImage(named: "heartFilled") ?? UIImage()
     static let comments: UIImage = UIImage(named: "comments") ?? UIImage()
     static let search: UIImage = UIImage(named: "search") ?? UIImage()
+    static let plusCircle: UIImage = UIImage(named: "plusCircle") ?? UIImage()
 }

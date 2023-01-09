@@ -20,6 +20,22 @@ protocol RegisterViewProtocol: AnyObject {
 
 class RegisterView: UIViewController {
     
+    private lazy var viewImgLogo: UIView = {
+        let vw = UIView()
+        vw.translatesAutoresizingMaskIntoConstraints = false
+        vw.backgroundColor = .clear
+        return vw
+    }()
+    
+    private lazy var imgPlus: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.contentMode = .scaleAspectFit
+        image.clipsToBounds = true
+        image.image = ImageCatalog.plusCircle
+        return image
+    }()
+    
     private lazy var imgLogo: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -152,7 +168,9 @@ private extension RegisterView {
         stackView.addArrangedSubview(lblPasswordError)
         stackView.addArrangedSubview(txtPassword)
         
-        view.addSubview(imgLogo)
+        viewImgLogo.addSubview(imgLogo)
+        viewImgLogo.addSubview(imgPlus)
+        view.addSubview(viewImgLogo)
         view.addSubview(stackView)
         view.addSubview(btnRegister)
         
@@ -163,10 +181,21 @@ private extension RegisterView {
     func setConstraints() {
         
         constraintsArray = [
-            imgLogo.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80),
-            imgLogo.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            imgLogo.widthAnchor.constraint(equalToConstant: 100),
-            imgLogo.heightAnchor.constraint(equalToConstant: 100),
+            
+            imgLogo.topAnchor.constraint(equalTo: viewImgLogo.topAnchor, constant: 0),
+            imgLogo.leadingAnchor.constraint(equalTo: viewImgLogo.leadingAnchor, constant: 0),
+            imgLogo.trailingAnchor.constraint(equalTo: viewImgLogo.trailingAnchor, constant: 0),
+            imgLogo.bottomAnchor.constraint(equalTo: viewImgLogo.bottomAnchor, constant: 0),
+            
+            imgPlus.trailingAnchor.constraint(equalTo: viewImgLogo.trailingAnchor, constant: -10),
+            imgPlus.bottomAnchor.constraint(equalTo: viewImgLogo.bottomAnchor, constant: -5),
+            imgPlus.widthAnchor.constraint(equalToConstant: 20),
+            imgPlus.heightAnchor.constraint(equalToConstant: 20),
+            
+            viewImgLogo.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80),
+            viewImgLogo.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            viewImgLogo.widthAnchor.constraint(equalToConstant: 110),
+            viewImgLogo.heightAnchor.constraint(equalToConstant: 110),
             
             stackView.topAnchor.constraint(equalTo: imgLogo.bottomAnchor, constant: 50),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 45),
@@ -189,6 +218,7 @@ private extension RegisterView {
                 self.btnRegister.isEnabled = false
                 self.txtPassword.resignFirstResponder()
             }
+            showIndicator()
             presenter?.tapToRegister(input: (input.1, input.2, input.3, imgLogo.image?.pngData()))
         }
     }
@@ -282,6 +312,7 @@ extension RegisterView: UITextFieldDelegate {
 extension RegisterView: RegisterViewProtocol {
     
     func registerDataError(error: Error?) {
+        hideIndicator()
         guard let error = error else {
             return
         }

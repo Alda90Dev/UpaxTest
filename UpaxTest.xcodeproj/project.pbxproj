@@ -52,6 +52,8 @@
 		B8378661296C0EBB008D628F /* NotificationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8378660296C0EBB008D628F /* NotificationsPresenter.swift */; };
 		B8378663296C0F4E008D628F /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8378662296C0F4E008D628F /* NotificationsView.swift */; };
 		B8381A90296A44C60037B565 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8381A8F296A44C60037B565 /* LoginRouter.swift */; };
+		B85E69B8296C7CF2003431F1 /* UIViewController+IHProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85E69B7296C7CF2003431F1 /* UIViewController+IHProgressHUD.swift */; };
+		B85E69C6296C86A6003431F1 /* UpaxTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85E69C5296C86A6003431F1 /* UpaxTestTests.swift */; };
 		B875E41A296C118900B4260F /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B875E419296C118900B4260F /* PostResponse.swift */; };
 		B875E41D296C12F700B4260F /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B875E41C296C12F700B4260F /* PostCell.swift */; };
 		B875E420296C23B400B4260F /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B875E41F296C23B400B4260F /* ProfileRouter.swift */; };
@@ -72,6 +74,16 @@
 		B8FBEB8B296C687A00BA660C /* TitleBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FBEB8A296C687A00BA660C /* TitleBarView.swift */; };
 		B8FBEB8E296C74E000BA660C /* StackValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FBEB8D296C74E000BA660C /* StackValues.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B85E69C7296C86A6003431F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B876D9C0296A134000405D42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B876D9C7296A134000405D42;
+			remoteInfo = UpaxTest;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AB4CDF64D7CD38B9465B3762 /* Pods_UpaxTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UpaxTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +131,9 @@
 		B8378660296C0EBB008D628F /* NotificationsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsPresenter.swift; sourceTree = "<group>"; };
 		B8378662296C0F4E008D628F /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		B8381A8F296A44C60037B565 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		B85E69B7296C7CF2003431F1 /* UIViewController+IHProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+IHProgressHUD.swift"; sourceTree = "<group>"; };
+		B85E69C3296C86A6003431F1 /* UpaxTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UpaxTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B85E69C5296C86A6003431F1 /* UpaxTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpaxTestTests.swift; sourceTree = "<group>"; };
 		B875E419296C118900B4260F /* PostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
 		B875E41C296C12F700B4260F /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		B875E41F296C23B400B4260F /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
@@ -145,6 +160,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B85E69C0296C86A6003431F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B876D9C5296A134000405D42 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -196,6 +218,7 @@
 			children = (
 				B804FF66296AAFF300EAF3E6 /* UIViewController+AlertController.swift */,
 				B8378636296B93AF008D628F /* UIView+Extensions.swift */,
+				B85E69B7296C7CF2003431F1 /* UIViewController+IHProgressHUD.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -384,6 +407,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		B85E69C4296C86A6003431F1 /* UpaxTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				B85E69C5296C86A6003431F1 /* UpaxTestTests.swift */,
+			);
+			path = UpaxTestTests;
+			sourceTree = "<group>";
+		};
 		B875E41B296C12AA00B4260F /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,6 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				B876D9CA296A134000405D42 /* UpaxTest */,
+				B85E69C4296C86A6003431F1 /* UpaxTestTests */,
 				B876D9C9296A134000405D42 /* Products */,
 				143AC24A9424DBA024621170 /* Pods */,
 				24DA87B82BA7CA97658C4395 /* Frameworks */,
@@ -418,6 +450,7 @@
 			isa = PBXGroup;
 			children = (
 				B876D9C8296A134000405D42 /* UpaxTest.app */,
+				B85E69C3296C86A6003431F1 /* UpaxTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -481,6 +514,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B85E69C2296C86A6003431F1 /* UpaxTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B85E69C9296C86A6003431F1 /* Build configuration list for PBXNativeTarget "UpaxTestTests" */;
+			buildPhases = (
+				B85E69BF296C86A6003431F1 /* Sources */,
+				B85E69C0296C86A6003431F1 /* Frameworks */,
+				B85E69C1296C86A6003431F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B85E69C8296C86A6003431F1 /* PBXTargetDependency */,
+			);
+			name = UpaxTestTests;
+			productName = UpaxTestTests;
+			productReference = B85E69C3296C86A6003431F1 /* UpaxTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B876D9C7296A134000405D42 /* UpaxTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B876D9DC296A134200405D42 /* Build configuration list for PBXNativeTarget "UpaxTest" */;
@@ -510,6 +561,10 @@
 				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
+					B85E69C2296C86A6003431F1 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = B876D9C7296A134000405D42;
+					};
 					B876D9C7296A134000405D42 = {
 						CreatedOnToolsVersion = 14.1;
 					};
@@ -529,11 +584,19 @@
 			projectRoot = "";
 			targets = (
 				B876D9C7296A134000405D42 /* UpaxTest */,
+				B85E69C2296C86A6003431F1 /* UpaxTestTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B85E69C1296C86A6003431F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B876D9C6296A134000405D42 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -589,6 +652,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B85E69BF296C86A6003431F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B85E69C6296C86A6003431F1 /* UpaxTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B876D9C4296A134000405D42 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -642,6 +713,7 @@
 				B89C8879296A52D9002240C5 /* LoginView.swift in Sources */,
 				B875E426296C251200B4260F /* ProfileView.swift in Sources */,
 				B819E2D0296C438B00BBA5AD /* ChartsPresenter.swift in Sources */,
+				B85E69B8296C7CF2003431F1 /* UIViewController+IHProgressHUD.swift in Sources */,
 				B8378637296B93AF008D628F /* UIView+Extensions.swift in Sources */,
 				B89C8881296A5AC5002240C5 /* ColorCatalog.swift in Sources */,
 				B804FF6A296AB9CB00EAF3E6 /* RegisterRouter.swift in Sources */,
@@ -658,6 +730,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B85E69C8296C86A6003431F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B876D9C7296A134000405D42 /* UpaxTest */;
+			targetProxy = B85E69C7296C86A6003431F1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		B876D9D6296A134200405D42 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -670,6 +750,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B85E69CA296C86A6003431F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6K7VRQC2P5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = aldaDev.UpaxTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UpaxTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/UpaxTest";
+			};
+			name = Debug;
+		};
+		B85E69CB296C86A6003431F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6K7VRQC2P5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = aldaDev.UpaxTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UpaxTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/UpaxTest";
+			};
+			name = Release;
+		};
 		B876D9DA296A134200405D42 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -849,6 +967,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B85E69C9296C86A6003431F1 /* Build configuration list for PBXNativeTarget "UpaxTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B85E69CA296C86A6003431F1 /* Debug */,
+				B85E69CB296C86A6003431F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B876D9C3296A134000405D42 /* Build configuration list for PBXProject "UpaxTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
