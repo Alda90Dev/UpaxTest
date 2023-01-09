@@ -25,6 +25,15 @@
 		B804FFA2296B641400EAF3E6 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FFA1296B641400EAF3E6 /* SplashRouter.swift */; };
 		B804FFA4296B649800EAF3E6 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FFA3296B649800EAF3E6 /* SplashPresenter.swift */; };
 		B804FFA6296B64C100EAF3E6 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FFA5296B64C100EAF3E6 /* SplashView.swift */; };
+		B804FFAB296B6D1100EAF3E6 /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FFAA296B6D1100EAF3E6 /* TabBarRouter.swift */; };
+		B804FFAD296B6D8600EAF3E6 /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FFAC296B6D8600EAF3E6 /* TabBarPresenter.swift */; };
+		B804FFAF296B6E6500EAF3E6 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804FFAE296B6E6500EAF3E6 /* TabBarView.swift */; };
+		B8378637296B93AF008D628F /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8378636296B93AF008D628F /* UIView+Extensions.swift */; };
+		B837863A296B9591008D628F /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8378639296B9591008D628F /* HomeRouter.swift */; };
+		B837863C296B95E0008D628F /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B837863B296B95E0008D628F /* HomeInteractor.swift */; };
+		B837863E296B965D008D628F /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B837863D296B965D008D628F /* HomePresenter.swift */; };
+		B8378640296B981F008D628F /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B837863F296B981F008D628F /* NetworkRouter.swift */; };
+		B8378642296B98FF008D628F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8378641296B98FF008D628F /* NetworkManager.swift */; };
 		B8381A90296A44C60037B565 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8381A8F296A44C60037B565 /* LoginRouter.swift */; };
 		B876D9CC296A134000405D42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B876D9CB296A134000405D42 /* AppDelegate.swift */; };
 		B876D9D5296A134200405D42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B876D9D4296A134200405D42 /* Assets.xcassets */; };
@@ -57,6 +66,15 @@
 		B804FFA1296B641400EAF3E6 /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
 		B804FFA3296B649800EAF3E6 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		B804FFA5296B64C100EAF3E6 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		B804FFAA296B6D1100EAF3E6 /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
+		B804FFAC296B6D8600EAF3E6 /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
+		B804FFAE296B6E6500EAF3E6 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		B8378636296B93AF008D628F /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		B8378639296B9591008D628F /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		B837863B296B95E0008D628F /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		B837863D296B965D008D628F /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		B837863F296B981F008D628F /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		B8378641296B98FF008D628F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B8381A8F296A44C60037B565 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		B876D9C8296A134000405D42 /* UpaxTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpaxTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B876D9CB296A134000405D42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				B804FF63296AA92E00EAF3E6 /* NetworkResult.swift */,
+				B837863F296B981F008D628F /* NetworkRouter.swift */,
+				B8378641296B98FF008D628F /* NetworkManager.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -123,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				B804FF66296AAFF300EAF3E6 /* UIViewController+AlertController.swift */,
+				B8378636296B93AF008D628F /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -167,6 +188,39 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
+		B804FFA7296B6C5F00EAF3E6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B8378638296B9574008D628F /* Home */,
+				B804FFA8296B6CD200EAF3E6 /* TabBar */,
+				B804FF68296AB99200EAF3E6 /* Register */,
+				B8381A8E296A447C0037B565 /* Login */,
+				B804FF9F296B63EB00EAF3E6 /* Splash */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B804FFA8296B6CD200EAF3E6 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				B804FFAA296B6D1100EAF3E6 /* TabBarRouter.swift */,
+				B804FFAC296B6D8600EAF3E6 /* TabBarPresenter.swift */,
+				B804FFAE296B6E6500EAF3E6 /* TabBarView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		B8378638296B9574008D628F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B8378639296B9591008D628F /* HomeRouter.swift */,
+				B837863B296B95E0008D628F /* HomeInteractor.swift */,
+				B837863D296B965D008D628F /* HomePresenter.swift */,
+				B804FF6B296ABA5600EAF3E6 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		B8381A8D296A446D0037B565 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,20 +261,17 @@
 		B876D9CA296A134000405D42 /* UpaxTest */ = {
 			isa = PBXGroup;
 			children = (
-				B804FF9F296B63EB00EAF3E6 /* Splash */,
+				B804FFA7296B6C5F00EAF3E6 /* Modules */,
 				B804FF9C296B538C00EAF3E6 /* LocalStorage */,
 				B804FF93296B3A6F00EAF3E6 /* ImagePickerManager */,
-				B804FF68296AB99200EAF3E6 /* Register */,
 				B804FF62296AA91200EAF3E6 /* NetworkManager */,
 				B804FF5D296A916C00EAF3E6 /* Firebase */,
 				B89C887A296A59F8002240C5 /* Utils */,
-				B8381A8E296A447C0037B565 /* Login */,
 				B8381A8D296A446D0037B565 /* App */,
 				B876D9D4296A134200405D42 /* Assets.xcassets */,
 				B876D9D6296A134200405D42 /* LaunchScreen.storyboard */,
 				B804FF60296AA6B600EAF3E6 /* GoogleService-Info.plist */,
 				B876D9D9296A134200405D42 /* Info.plist */,
-				B804FF6B296ABA5600EAF3E6 /* HomeView.swift */,
 			);
 			path = UpaxTest;
 			sourceTree = "<group>";
@@ -362,6 +413,7 @@
 			files = (
 				B89C8870296A50DA002240C5 /* LoginPresenter.swift in Sources */,
 				B804FF6C296ABA5600EAF3E6 /* HomeView.swift in Sources */,
+				B804FFAF296B6E6500EAF3E6 /* TabBarView.swift in Sources */,
 				B804FFA6296B64C100EAF3E6 /* SplashView.swift in Sources */,
 				B804FF67296AAFF300EAF3E6 /* UIViewController+AlertController.swift in Sources */,
 				B804FF95296B3A8700EAF3E6 /* ImagePicker.swift in Sources */,
@@ -369,17 +421,25 @@
 				B89C887D296A5A10002240C5 /* Content.swift in Sources */,
 				B804FF64296AA92E00EAF3E6 /* NetworkResult.swift in Sources */,
 				B804FF5F296A917E00EAF3E6 /* FirebaseManager.swift in Sources */,
+				B8378642296B98FF008D628F /* NetworkManager.swift in Sources */,
+				B837863C296B95E0008D628F /* HomeInteractor.swift in Sources */,
 				B804FF6E296ABAC500EAF3E6 /* RegisterInteractor.swift in Sources */,
 				B89C887F296A5AA5002240C5 /* ImageCatalog.swift in Sources */,
 				B804FF9B296B4CDF00EAF3E6 /* Profile.swift in Sources */,
 				B804FFA4296B649800EAF3E6 /* SplashPresenter.swift in Sources */,
+				B837863E296B965D008D628F /* HomePresenter.swift in Sources */,
 				B804FF72296ABC8500EAF3E6 /* RegisterView.swift in Sources */,
 				B89C8883296A5AFA002240C5 /* CustomTextField.swift in Sources */,
 				B804FF97296B3B1F00EAF3E6 /* ImagePickerExtensions.swift in Sources */,
 				B804FFA2296B641400EAF3E6 /* SplashRouter.swift in Sources */,
+				B804FFAD296B6D8600EAF3E6 /* TabBarPresenter.swift in Sources */,
+				B837863A296B9591008D628F /* HomeRouter.swift in Sources */,
 				B876D9CC296A134000405D42 /* AppDelegate.swift in Sources */,
+				B8378640296B981F008D628F /* NetworkRouter.swift in Sources */,
+				B804FFAB296B6D1100EAF3E6 /* TabBarRouter.swift in Sources */,
 				B89C8872296A50F2002240C5 /* LoginInteractor.swift in Sources */,
 				B89C8879296A52D9002240C5 /* LoginView.swift in Sources */,
+				B8378637296B93AF008D628F /* UIView+Extensions.swift in Sources */,
 				B89C8881296A5AC5002240C5 /* ColorCatalog.swift in Sources */,
 				B804FF6A296AB9CB00EAF3E6 /* RegisterRouter.swift in Sources */,
 				B8381A90296A44C60037B565 /* LoginRouter.swift in Sources */,

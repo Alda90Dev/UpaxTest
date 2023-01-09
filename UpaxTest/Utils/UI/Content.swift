@@ -17,13 +17,16 @@ struct Content {
     static let signUp: String = "Sign Up"
     static let errorMessage: String = "We are sorry, and error has ocurred!"
     static let hiMessage: String = "Hello Again. \n Welcome back."
-    static let new: String = "New Here?"
-    
+    static let new: String = "New Here?"    
     
     struct alert {
         static let okMessage: String = "Ok"
         static let logOut: String = "Log out"
         static let cancel: String = "Cancel"
+    }
+    
+    struct K {
+        static let view: String = "view"
     }
     
 }

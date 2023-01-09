@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         UINavigationBar.appearance().tintColor = ColorCatalog.dark
+        UINavigationBar.appearance().backgroundColor = .white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: ColorCatalog.dark]
         
         window = UIWindow(frame: UIScreen.main.bounds)
         let splashView = SplashRouter.createSplashModule()

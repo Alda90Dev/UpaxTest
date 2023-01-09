@@ -48,11 +48,10 @@ class LoginRouter: LoginRouterProtocol {
     
     func goToHome(from view: LoginViewProtocol) {
         if let vc = view as? UIViewController {
-            let homeView = HomeView()
-            let navVC = UINavigationController(rootViewController: homeView)
-            navVC.modalTransitionStyle = .crossDissolve
-            navVC.modalPresentationStyle = .fullScreen
-            vc.present(navVC, animated: true)
+            let homeView = TabBarRouter.createTabBarModule()
+            homeView.modalTransitionStyle = .crossDissolve
+            homeView.modalPresentationStyle = .fullScreen
+            vc.present(homeView, animated: true)
         }
     }
     
