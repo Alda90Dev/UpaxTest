@@ -7,7 +7,7 @@ El proyecto tiene las siguientes características técnicas:
 * Versión de Swift 4.2
 
 ## Observaciones
-Algunas librerías de los pods son antiguas puesto que se requerían para algunas funcionalidades del proyecto. En algunos casos se tendrá que actualizar 
+Algunas librerías de los pods son antiguas puesto que se requerían para algunas funcionalidades del proyecto, el cual está desarrollado con una versión anterior de swift. En algunos casos se tendrá que actualizar 
 el código de alguna librería para que funcione con el proyecto.
 
 Si algun problema pueden escribirme al correo: alda90dev@gmail.com
