@@ -6,13 +6,13 @@ target 'UpaxTest' do
   use_frameworks!
 
   # Pods for UpaxTest
-  pod 'FirebaseAuth'
-  pod 'FirebaseFirestore'
-  pod 'FirebaseFirestoreSwift'
-  pod 'Firebase/Storage'  
-  pod 'SDWebImage'
+  pod 'FirebaseAuth', '~> 10.3.0'
+  pod 'FirebaseFirestore', '~> 10.3.0'
+  pod 'FirebaseFirestoreSwift', '~> 10.3.0'
+  pod 'Firebase/Storage', '~> 10.3.0'
+  pod 'SDWebImage', '~> 5.14.2'
   pod 'ScrollableSegmentedControl', '~> 1.3.0'
   pod 'Charts', '~> 3.0.5'
-  pod 'IHProgressHUD'
+  pod 'IHProgressHUD', '~> 0.1.4'
   
 end

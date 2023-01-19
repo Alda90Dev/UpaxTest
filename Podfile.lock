@@ -738,13 +738,13 @@ PODS:
 
 DEPENDENCIES:
   - Charts (~> 3.0.5)
-  - Firebase/Storage
-  - FirebaseAuth
-  - FirebaseFirestore
-  - FirebaseFirestoreSwift
-  - IHProgressHUD
+  - Firebase/Storage (~> 10.3.0)
+  - FirebaseAuth (~> 10.3.0)
+  - FirebaseFirestore (~> 10.3.0)
+  - FirebaseFirestoreSwift (~> 10.3.0)
+  - IHProgressHUD (~> 0.1.4)
   - ScrollableSegmentedControl (~> 1.3.0)
-  - SDWebImage
+  - SDWebImage (~> 5.14.2)
 
 SPEC REPOS:
   trunk:
@@ -801,6 +801,6 @@ SPEC CHECKSUMS:
   ScrollableSegmentedControl: a90ae91537fd670a46b177301d035223e3bd149e
   SDWebImage: b9a731e1d6307f44ca703b3976d18c24ca561e84
 
-PODFILE CHECKSUM: 627eaa60fce4cc49881a536949e0068f9c1163bd
+PODFILE CHECKSUM: f08b290837e3d1e506ce5cb7c0c7423d89823821
 
 COCOAPODS: 1.9.3
